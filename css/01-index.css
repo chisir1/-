@@ -61,7 +61,12 @@ header div .right li span {
   color: red;
 }
 
-.bottom {
+.b_big {
+  width: 100%;
+  background-color: #505050;
+}
+
+.b_big .bottom {
   width: 1600px;
   height: 500px;
   margin: 0 auto;
@@ -70,39 +75,39 @@ header div .right li span {
   padding-left: 80px;
 }
 
-.bottom .code {
+.b_big .bottom .code {
   float: left;
 }
 
-.bottom .jiguo {
+.b_big .bottom .jiguo {
   float: left;
   margin: 0 30px;
 }
 
-.bottom .lis {
+.b_big .bottom .lis {
   float: left;
 }
 
-.bottom .lis .d_ul {
+.b_big .bottom .lis .d_ul {
   overflow: hidden;
   float: left;
   margin-left: 20px;
   width: 200px;
 }
 
-.bottom .lis .d_ul span {
+.b_big .bottom .lis .d_ul span {
   color: #fff;
   font-size: 20px;
   display: block;
   margin-bottom: 10px;
 }
 
-.bottom .lis .d_ul ul {
+.b_big .bottom .lis .d_ul ul {
   float: left;
   margin-right: 20px;
 }
 
-.bottom .lis .d_ul ul li {
+.b_big .bottom .lis .d_ul ul li {
   list-style: none;
   font-size: 14px;
   color: #A2A6A5;
