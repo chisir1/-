@@ -133,17 +133,27 @@ header{
 .left_right{
     width: 1600px;
     margin: 0 auto;
-    overflow: hidden;
+    // overflow: hidden;
     position: relative;
     .lun_left{
+        width: 50px;
+        height: 50px;
         position: absolute;
         top: 150px;
-        left: -30px;
+        left: -50px;
+        color: #000;
+        font-size: 50px;
+        z-index: 2;
     }
     .lun_right{
+        width: 50px;
+        height: 50px;
         position: absolute;
         top: 150px;
-        right: 10px;
+        right: 0px;
+        font-size: 50px;
+        z-index: 2;
+
     }
 .lun1{
     width: 1600px;
