@@ -67,6 +67,12 @@
 
         </div>
     </div>
+    <!-- 酷玩精选 -->
+    <div class="coldplay">
+        <div class="coldplay_1">
+            
+        </div>
+    </div>
     <!-- 3准备模板 -->
     <!-- 轮播模板 -->
     <script id="first" type="text/html">
@@ -122,6 +128,25 @@
             </div>
         {{/each}}   
     </script>
+    <!-- 酷玩精选 -->
+    <script id="coldplay" type="text/html">
+       <h3>酷玩精选</h3>
+       <div>
+            <div class="coldplay_img">
+                <img src="{{$value.img}}" alt="">
+            </div>
+            <p>{{$value.text}}</p>
+            <div>
+                <span>{{$value.price}}</span>
+                <div>
+                    <span><img src="./../img/zan.png" alt=""></span>
+                    <span>{{$value.like}}</span>
+                    <span><img src="./../img/reply.png" alt=""></span>
+                    <span>{{$value.words}}</span>
+                </div>
+            </div>
+        </div>
+    </script>
     <script src="./../js/oajax.js"></script>
     <script>
         ajax_api('http://192.168.31.110:3000/useing/public',fn)
@@ -152,6 +177,14 @@
                 value:obj
             })
             document.getElementsByClassName('guide_1')[0].innerHTML= html1
+            }
+            // 酷玩热选
+            ajax_api('http://192.168.31.110:3000/play/new',fnk)
+            function fnk(obj){
+            var html2 = template('coldplay',{
+                value:obj
+            })
+            document.getElementsByClassName('coldplay_1')[0].innerHTML= htm2
             }
     </script> 
     </header>

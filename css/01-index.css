@@ -378,6 +378,16 @@ header .guide .guide_1 .guide_div .button_border3 {
   left: 35px;
 }
 
+header .coldplay {
+  width: 100%;
+  background: #505050;
+}
+
+header .coldplay .coldplay_1 {
+  width: 1600px;
+  margin: auto;
+}
+
 .b_big {
   width: 100%;
   background-color: #505050;
