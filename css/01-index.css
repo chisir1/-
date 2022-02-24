@@ -156,6 +156,20 @@ header .lun1 #d1 .min_dd {
   float: left;
   text-align: center;
   margin-right: 30px;
+  position: relative;
+}
+
+header .lun1 #d1 .min_dd .top_right {
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  display: block;
+  height: 30px;
+  background-color: red;
+  color: #Fff;
+  text-align: center;
+  line-height: 30px;
+  border-radius: 10px;
 }
 
 header .lun1 #d1 .min_dd img {

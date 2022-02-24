@@ -47,15 +47,20 @@
     <script src="./../js/template-web.js"></script>
     <!-- 2准备页面容器 -->
     <div class="lun1">
-
-    
         <div id="d1"></div>
+    </div>
+    <div class="report">
+        <div class="report_1">
+
+        </div>
     </div>
     <!-- 3准备模板 -->
     <script id="first" type="text/html">
        <h1>热门试用</h1>
         {{each value}}
         <div class="min_dd">
+            
+            <span class="top_right">{{$value.info_ty}}</span>
             <img src={{$value.img}} alt="" >
             <p class="brief">{{$value.text}}</p>
             <p class="nu_"><span class="totalnum">{{$value.totalnum}}</span><span class="num">{{$value.num}}</span></p>
@@ -63,6 +68,25 @@
             <p class="surplus">剩余时间2天</p>
         </div>
         {{/each}}
+    </script>
+    <script id="first2" type="text/html">
+                <h3>报告精选</h3>
+                {{each value}}
+                <div class="__ajax">
+                    <div class="_ajax_imgs"></div>
+                    <p>{{$value.text}}</p>
+                    <div>
+                        <span>.</span>
+                        <span>susu</span>
+                        <div>
+                            <span><img src="./../img/zan.png" alt=""></span>
+                            <span>1</span>
+                            <span><img src="./../img/reply.png" alt=""></span>
+                            <span>2</span>
+                        </div>
+                    </div>
+                </div>
+                {{/each}}
     </script>
     <script src="./../js/oajax.js"></script>
     <script>
@@ -75,27 +99,20 @@
             //向页面渲染
             document.getElementById('d1').innerHTML= html
             }
+        ajax_api('http://192.168.31.110:3000/useing/master',fns)
+                // 模板和数据关联
+            function fns(obj){
+            var html = template('first2',{
+                value:obj
+            })
+            //向页面渲染
+            console.log(document.getElementsByClassName('report')[0]);
+            document.getElementsByClassName('report')[0].innerHTML= html
+            }
+
     </script>
         <!-- 报告精选 -->
-        <div class="report">
-            <div class="report_1">
-                <h3>报告精选</h3>
-                <div class="__ajax">
-                    <div class="_ajax_imgs"></div>
-                    <p></p>
-                    <div>
-                        <span>.</span>
-                        <span>susu</span>
-                        <div>
-                            <span><img src="./../img/zan.png" alt=""></span>
-                            <span>1</span>
-                            <span><img src="./../img/reply.png" alt=""></span>
-                            <span>2</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
+       
     </header>
     <!-- 底部 -->
     <!-- 页面尾部 -->
