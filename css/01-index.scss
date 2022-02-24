@@ -130,19 +130,36 @@ header{
         }
     }
     // 轮播图
+.left_right{
+    width: 1600px;
+    margin: 0 auto;
+    overflow: hidden;
+    position: relative;
+    .lun_left{
+        position: absolute;
+        top: 150px;
+        left: -20px;
+    }
+    .lun_right{
+        position: absolute;
+        top: 150px;
+        right: 0px;
+    }
 .lun1{
     width: 1600px;
     margin: 0 auto;
-    overflow: auto;
+    overflow: hidden;
+    position: relative;
+
     #d1{
-        width: 4550px;
-        height: 500px;
+        width: 5200px;
+        height: 400px;
         // overflow: auto;
         .min_dd{
             width: 320px;
             float: left;
             text-align: center;
-            margin-right: 30px;
+            margin-right: 80px;
             position: relative;
             .top_right{
                 position: absolute;
@@ -200,6 +217,8 @@ header{
         }
     }
 }
+}
+
 //   精选报告
     .report{
         width: 100%;

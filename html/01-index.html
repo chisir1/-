@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link href="//netdna.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
     <link rel="stylesheet" href="./../css/01-index.css">
 </head>
 <body>
@@ -46,8 +47,14 @@
     <!-- 1.移入模板引擎 -->
     <script src="./../js/template-web.js"></script>
     <!-- 2准备页面容器 -->
+
+    <div class="left_right">
+        <h1>热门试用</h1>
+        <div class="lun_left"><i class="fa fa-arrow-left"></i></div>
+        <div class="lun_right"><i class="fa fa-arrow-right"></i></div>
     <div class="lun1">
         <div id="d1"></div>
+    </div>
     </div>
     <div class="report">
         <div class="report_1">
@@ -56,7 +63,7 @@
     </div>
     <!-- 3准备模板 -->
     <script id="first" type="text/html">
-       <h1>热门试用</h1>
+       
         {{each value}}
         <div class="min_dd">
             
@@ -106,7 +113,7 @@
                 value:obj
             })
             //向页面渲染
-            console.log(document.getElementsByClassName('report')[0]);
+            console.log(obj);
             document.getElementsByClassName('report')[0].innerHTML= html
             }
 
@@ -179,5 +186,6 @@
         </div>
     </div>
 </div>
+<script src="./../js/01-index.js"></script>
 </body>
 </html>
