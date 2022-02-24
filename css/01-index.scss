@@ -4,9 +4,16 @@
     list-style: none;
     box-sizing: border-box;
 }
+.clear{
+    width: 0px;
+    height: 0px;
+    clear:both;
+}
+
 header{
     width: 100%;
-    div{
+    // 头部
+    .now{
         width: 1600px;
         height:60px;
         margin: auto;
@@ -40,14 +47,15 @@ header{
                 div{
                     padding: 0;
                     width: 80px;
+                    height: 60px;
                     float: left;
-                    background: url('./../img/search.png') 18px 18px no-repeat;
+                    background: url('./../img/search.png') 30px 20px no-repeat;
                 }
                span{
-                float: left;
+                float: right;
                 padding: 4px 6px;
                 border: 1px solid;
-                margin: 15px 0px;
+                margin: 15px 15px 0px;
                 color: red;
                }
                
@@ -55,8 +63,118 @@ header{
         }
         
     }
+    // 中部
+    section{
+        overflow: hidden;
+        width: 100%;
+        height: 300px;
+        background: url('./../img/original.jpg') 0px 0px no-repeat;
+        background-size: 100%  100%;
+       .box{
+            width: 1600px;
+            padding: 0px 180px;
+            margin: auto;
+            color: #fff;
+            position: relative;
+           animation: aa 1s ease 0.5 ;
+           @keyframes aa {
+              0% {
+                transform:translate(500px,-300px);
+              } 
+              40% {
+                transform:translate(380px,-200px);
+              } 
+              60% {
+                transform:translate(260px,-100px);
+              } 
+              80% {
+                transform:translate(80px,-10px);
+              } 
+              100%{
+                transform:translate(0px,-0px) ;
+              }
+           }
+           
+
+          .box1{
+                position: absolute;
+                padding-top:60px;
+                right: 180px;
+                h1{
+                    font-size: 30px;
+                }
+                div{
+                    margin: 25px 0px;
+                    span{
+                      margin-right: 28px;
+                      border: 1px solid ;
+                      padding:5px 6px;
+                      box-sizing: border-box;
+                      background: rgba(255,255,255,0.4);
+                    }
+                    span:nth-child(1){
+                        margin-left: 6px;
+                    }
+                }
+                .div_{
+                    width: 240px;
+                    height: 40px;
+                    text-align: center;
+                    line-height: 40px;
+                    font-size: 18px;
+                    font-weight: 600;
+                    background: red;
+                    margin-left: 18px;
+                }
+            }
+        }
+    }
+    .report{
+        width: 100%;
+        background: #F7F7F7;
+        .report_1{
+            width: 1600px;
+            padding: 20px 180px;
+            margin: auto;
+            h3{
+                margin-bottom: 10px;
+            }
+            .__ajax{
+                width: 220px;
+                height: 240px;
+                background: #505050;
+                border-radius: 6%;
+                ._ajax_imgs{
+                    border-radius: 6%;
+                    width: 220px;
+                    height: 130px;
+                    background: #234123;
+                }
+                p{
+                    height: 60px;
+                    width: 220px;
+                    background: green;
+                }
+                div{
+                    span:nth-child(1){
+                        font-size: 30px;
+                        font-weight: 900;
+                        box-sizing: border-box;
+                        margin-left: 5px;
+                    }
+                   div{
+                       float: right;
+                       span:nth-child(2){
+                           margin-right: 7px;
+                       }
+                   }
+                }
+            }
+        }
+    }
 }
-  
+
+//   底部
 .bottom{
     width: 1600px;
     height: 500px;
