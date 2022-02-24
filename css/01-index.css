@@ -156,7 +156,7 @@ header .left_right .lun_left {
 header .left_right .lun_right {
   position: absolute;
   top: 150px;
-  right: 0px;
+  right: 10px;
 }
 
 header .left_right .lun1 {
