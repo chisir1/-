@@ -140,26 +140,46 @@ header section .box .box1 .div_ {
   margin-left: 18px;
 }
 
-header .lun1 {
+header .left_right {
   width: 1600px;
   margin: 0 auto;
-  overflow: auto;
-}
-
-header .lun1 #d1 {
-  width: 4550px;
-  height: 500px;
-}
-
-header .lun1 #d1 .min_dd {
-  width: 320px;
-  float: left;
-  text-align: center;
-  margin-right: 30px;
+  overflow: hidden;
   position: relative;
 }
 
-header .lun1 #d1 .min_dd .top_right {
+header .left_right .lun_left {
+  position: absolute;
+  top: 150px;
+  left: -20px;
+}
+
+header .left_right .lun_right {
+  position: absolute;
+  top: 150px;
+  right: 0px;
+}
+
+header .left_right .lun1 {
+  width: 1600px;
+  margin: 0 auto;
+  overflow: hidden;
+  position: relative;
+}
+
+header .left_right .lun1 #d1 {
+  width: 5200px;
+  height: 400px;
+}
+
+header .left_right .lun1 #d1 .min_dd {
+  width: 320px;
+  float: left;
+  text-align: center;
+  margin-right: 80px;
+  position: relative;
+}
+
+header .left_right .lun1 #d1 .min_dd .top_right {
   position: absolute;
   top: 0px;
   right: 0px;
@@ -172,25 +192,25 @@ header .lun1 #d1 .min_dd .top_right {
   border-radius: 10px;
 }
 
-header .lun1 #d1 .min_dd img {
+header .left_right .lun1 #d1 .min_dd img {
   width: 320px;
   height: 188px;
 }
 
-header .lun1 #d1 .min_dd .brief {
+header .left_right .lun1 #d1 .min_dd .brief {
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
   font-weight: bold;
 }
 
-header .lun1 #d1 .min_dd .nu_ {
+header .left_right .lun1 #d1 .min_dd .nu_ {
   height: 25px;
   width: 150px;
   margin: 0 auto;
 }
 
-header .lun1 #d1 .min_dd .nu_ .totalnum {
+header .left_right .lun1 #d1 .min_dd .nu_ .totalnum {
   color: #FC5C46;
   border: 1px solid;
   display: block;
@@ -200,7 +220,7 @@ header .lun1 #d1 .min_dd .nu_ .totalnum {
   margin-right: 20px;
 }
 
-header .lun1 #d1 .min_dd .nu_ .num {
+header .left_right .lun1 #d1 .min_dd .nu_ .num {
   color: #FC5C46;
   border: 1px solid;
   display: block;
@@ -209,11 +229,11 @@ header .lun1 #d1 .min_dd .nu_ .num {
   border-radius: 7px;
 }
 
-header .lun1 #d1 .min_dd .apply {
+header .left_right .lun1 #d1 .min_dd .apply {
   color: #FC5C46;
 }
 
-header .lun1 #d1 .min_dd .surplus {
+header .left_right .lun1 #d1 .min_dd .surplus {
   color: #FC5C46;
 }
 
