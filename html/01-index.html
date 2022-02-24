@@ -45,20 +45,30 @@
         <!-- 轮播图 -->
     <!-- 1.移入模板引擎 -->
     <script src="./../js/template-web.js"></script>
-    <!-- 2准备页面容器 -->
+    <!-- 轮播页面容器 -->
     <div class="lun1">
         <div id="d1"></div>
     </div>
+    <!-- 报告精选容器 -->
     <div class="report">
-        <div class="report_1">  
-      
+        <div class="report_1">
+
+        </div>
+    </div>
+    <!-- 导购精选 -->
+    <div class="guide">
+        <div class="guide_1">
+
         </div>
     </div>
     <!-- 3准备模板 -->
+    <!-- 轮播模板 -->
     <script id="first" type="text/html">
        <h1>热门试用</h1>
         {{each value}}
         <div class="min_dd">
+            
+            <span class="top_right">{{$value.info_ty}}</span>
             <img src={{$value.img}} alt="" >
             <p class="brief">{{$value.text}}</p>
             <p class="nu_"><span class="totalnum">{{$value.totalnum}}</span><span class="num">{{$value.num}}</span></p>
@@ -67,32 +77,49 @@
         </div>
         {{/each}}
     </script>
-   
-    
-    <script src="./../js/template-web.js"></script>
-    <script id="report_" type="text/html">
-        <h3>报告精选</h3>
+    <!-- 报告精选 模板-->
+    <script id="first2" type="text/html">
+                <h3>报告精选</h3>
+                {{each value}}
+                <div class="__ajax">
+                    <div class="_ajax_imgs"><img src="{{$value.img}}" alt=""></div>
+                    <p>{{$value.text}}</p>
+                    <div>
+                        <span>.</span>
+                        <span>{{$value.uName}}</span>
+                        <div>
+                            <span><img src="./../img/zan.png" alt=""></span>
+                            <span>{{$value.totalnum}}</span>
+                            <span><img src="./../img/reply.png" alt=""></span>
+                            <span>{{$value.apply}}</span>
+                        </div>
+                    </div>
+                </div>
+                {{/each}}
+    </script>
+    <!-- 导购精选 -->
+    <script id="guide" type="text/html">
+        <h3>导购精选</h3>
         {{each value}}
-        <div class="__ajax">
-            <div class="._ajax_imgs"><img src="{{$value.img}}" alt=""></div>
-            <p>{{$value.text}}</p>
-            <div>
-                <span>.</span>
-                <span>{{$value.uName}}</span>
-                <div>
+            <div class="guide_div">
+                <div><img src="{{$value.img}}" alt=""></div>
+                <p>{{$value.text}}</p>
+                <div class="fabulous">
                     <span><img src="./../img/zan.png" alt=""></span>
                     <span>{{$value.like}}</span>
                     <span><img src="./../img/reply.png" alt=""></span>
                     <span>{{$value.words}}</span>
+                    <div class="button_border1"></div>
+                    <div class="button_border2"></div>
+                    <div class="button_border3"></div>
                 </div>
             </div>
-        </div>
-        {{each}}
+        {{/each}}
     </script>
     <script src="./../js/oajax.js"></script>
     <script>
-        ajax_api('http://192.168.31.110:3000/report/new',fn)
-        //  模板和数据关联
+        ajax_api('http://192.168.31.110:3000/useing/public',fn)
+         // 模板和数据关联
          function fn(obj){
             var html = template('first',{
                 value:obj
@@ -100,21 +127,27 @@
             //向页面渲染
             document.getElementById('d1').innerHTML= html
             }
-     
 
 
-
-         ajax_api('http://192.168.31.110:3000/useing/master',fn)
-            function fn(obj){
-                var repo_html = template('report_',{
+            // 报告精选
+        ajax_api('http://192.168.31.110:3000/useing/master',fns)
+                // 模板和数据关联
+            function fns(obj){
+            var html = template('first2',{
                 value:obj
-                
             })
-          
-            document.getElementsByClassName('report_1')[0].innerHTML=repo_html
+            //向页面渲染
+            document.getElementsByClassName('report_1')[0].innerHTML= html
             }
-         
-    </script>  
+            //导购精选
+            ajax_api('http://192.168.31.110:3000/guid/hot',fng)
+            function fng(obj){
+            var html1 = template('guide',{
+                value:obj
+            })
+            document.getElementsByClassName('guide_1')[0].innerHTML= html1
+            }
+    </script> 
     </header>
     <!-- 底部 -->
     <!-- 页面尾部 -->

@@ -156,6 +156,20 @@ header .lun1 #d1 .min_dd {
   float: left;
   text-align: center;
   margin-right: 30px;
+  position: relative;
+}
+
+header .lun1 #d1 .min_dd .top_right {
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  display: block;
+  height: 30px;
+  background-color: red;
+  color: #Fff;
+  text-align: center;
+  line-height: 30px;
+  border-radius: 10px;
 }
 
 header .lun1 #d1 .min_dd img {
@@ -212,6 +226,8 @@ header .report .report_1 {
   width: 1600px;
   padding: 20px 180px;
   margin: auto;
+  height: 635px;
+  overflow: hidden;
 }
 
 header .report .report_1 h3 {
@@ -221,36 +237,125 @@ header .report .report_1 h3 {
 header .report .report_1 .__ajax {
   width: 220px;
   height: 240px;
-  background: #505050;
   border-radius: 6%;
+  float: left;
+  margin: 20px 44px;
+  background: #Fff;
 }
 
 header .report .report_1 .__ajax ._ajax_imgs {
   border-radius: 6%;
   width: 220px;
   height: 130px;
-  background: #234123;
+}
+
+header .report .report_1 .__ajax ._ajax_imgs img {
+  width: 220px;
+  height: 130px;
+  border-radius: 6% 6% 0 0;
 }
 
 header .report .report_1 .__ajax p {
   height: 60px;
   width: 220px;
-  background: green;
+  padding-top: 14px;
+  box-sizing: border-box;
+  overflow: hidden;
 }
 
-header .report .report_1 .__ajax div span:nth-child(1) {
+header .report .report_1 .__ajax .fabulous span:nth-child(1) {
   font-size: 30px;
   font-weight: 900;
   box-sizing: border-box;
   margin-left: 5px;
 }
 
-header .report .report_1 .__ajax div div {
+header .report .report_1 .__ajax .fabulous div {
   float: right;
 }
 
-header .report .report_1 .__ajax div div span:nth-child(2) {
+header .report .report_1 .__ajax .fabulous div span:nth-child(2) {
   margin-right: 7px;
+}
+
+header .guide {
+  width: 100%;
+}
+
+header .guide .guide_1 {
+  width: 1600px;
+  padding: 20px 180px;
+  background: #fff;
+  margin: auto;
+  overflow: hidden;
+  height: 317px;
+  margin-bottom: 50px;
+}
+
+header .guide .guide_1 .guide_div {
+  width: 220px;
+  height: 240px;
+  border-radius: 6%;
+  float: left;
+  margin: 20px 44px;
+  background: #Fff;
+  position: relative;
+}
+
+header .guide .guide_1 .guide_div div img {
+  width: 220px;
+  height: 130px;
+  border-radius: 6% 6% 0 0;
+}
+
+header .guide .guide_1 .guide_div p {
+  height: 60px;
+  width: 220px;
+  padding-top: 10px;
+  box-sizing: border-box;
+}
+
+header .guide .guide_1 .guide_div .fabulous span img {
+  width: 10px;
+  height: 10px;
+}
+
+header .guide .guide_1 .guide_div .fabulous span:nth-child(3) {
+  margin-left: 10px;
+}
+
+header .guide .guide_1 .guide_div .fabulous span:nth-child(1) {
+  margin-left: 10px;
+}
+
+header .guide .guide_1 .guide_div .button_border2 {
+  border-bottom: 2px solid #E5E7E6;
+  border-radius: 0px 0px 8px 8px;
+  height: 240px;
+  width: 200px;
+  position: absolute;
+  bottom: 5px;
+}
+
+header .guide .guide_1 .guide_div .button_border1 {
+  border-bottom: 3px solid #E5E7E6;
+  border-radius: 0px 0px 12px 12px;
+  height: 240px;
+  width: 160px;
+  position: absolute;
+  bottom: -1px;
+  left: 17px;
+  z-index: 5;
+}
+
+header .guide .guide_1 .guide_div .button_border3 {
+  border-radius: 0px 0px 12px 12px;
+  border-bottom: 3px solid #E5E7E6;
+  height: 240px;
+  width: 130px;
+  position: absolute;
+  bottom: -8px;
+  left: 35px;
 }
 
 .b_big {

@@ -143,6 +143,20 @@ header{
             float: left;
             text-align: center;
             margin-right: 30px;
+            position: relative;
+            .top_right{
+                position: absolute;
+                top: 0px;
+                right: 0px;
+                display: block;
+                // width: 50px;
+                height: 30px;
+                background-color: red;
+                color: #Fff;
+                text-align: center;
+                line-height: 30px;
+                border-radius: 10px;
+            }
             img{
                 width: 320px;
                 height: 188px;
@@ -194,26 +208,36 @@ header{
             width: 1600px;
             padding: 20px 180px;
             margin: auto;
+            height:635px;
+            overflow: hidden;
             h3{
                 margin-bottom: 10px;
             }
             .__ajax{
                 width: 220px;
                 height: 240px;
-                background: #505050;
                 border-radius: 6%;
+                float: left;
+                margin: 20px 44px;
+                background: #Fff;
                 ._ajax_imgs{
                     border-radius: 6%;
                     width: 220px;
                     height: 130px;
-                    background: #234123;
+                    img{
+                        width: 220px;
+                        height: 130px;
+                        border-radius: 6% 6% 0 0;
+                    }
                 }
                 p{
                     height: 60px;
                     width: 220px;
-                    background: green;
+                    padding-top:14px;
+                    box-sizing: border-box;
+                    overflow: hidden;
                 }
-                div{
+                .fabulous{
                     span:nth-child(1){
                         font-size: 30px;
                         font-weight: 900;
@@ -229,6 +253,83 @@ header{
                 }
             }
         }
+    }
+//导购精选
+    .guide{
+        width: 100%;
+        .guide_1{
+            width: 1600px;
+            padding:20px 180px ;
+            background: #fff;
+            margin: auto;
+            overflow: hidden;
+            height: 317px;
+            margin-bottom: 50px;
+            .guide_div{
+                width: 220px;
+                height: 240px;
+                border-radius: 6%;
+                float: left;
+                margin: 20px 44px;
+                background: #Fff;
+                position: relative;
+                div{
+                    img{
+                        width: 220px;
+                        height: 130px;
+                        border-radius: 6% 6% 0 0;
+                    }
+                }
+                p{
+                    height: 60px;
+                    width: 220px;
+                    padding-top:10px;
+                    box-sizing: border-box;
+                }
+                .fabulous{
+                    span{
+                        img{
+                            width: 10px;
+                            height: 10px;
+                        }
+                    }
+                    span:nth-child(3){
+                        margin-left: 10px;
+                    }
+                    span:nth-child(1){
+                        margin-left: 10px;
+                    }
+                }
+                .button_border2{
+                   border-bottom: 2px solid #E5E7E6;
+                   border-radius:0px 0px 8px 8px;
+                   height: 240px;
+                   width: 200px;
+                   position: absolute;
+                   bottom: 5px;
+               }
+               .button_border1{
+                border-bottom: 3px solid #E5E7E6;
+                border-radius:0px 0px 12px 12px;
+                height: 240px;
+                width: 160px;
+                position: absolute;
+                bottom: -1px;
+                left: 17px;
+                z-index: 5;
+                 }
+                 .button_border3{
+                    border-radius:0px 0px 12px 12px;
+                    border-bottom: 3px solid #E5E7E6;
+                    height: 240px;
+                    width: 130px;
+                    position: absolute;
+                    bottom: -8px;
+                    left: 35px;
+                }
+            }
+        }  
+            
     }
 }
 
