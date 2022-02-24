@@ -140,6 +140,69 @@ header section .box .box1 .div_ {
   margin-left: 18px;
 }
 
+header .lun1 {
+  width: 1600px;
+  margin: 0 auto;
+  overflow: auto;
+}
+
+header .lun1 #d1 {
+  width: 4550px;
+  height: 500px;
+}
+
+header .lun1 #d1 .min_dd {
+  width: 320px;
+  float: left;
+  text-align: center;
+  margin-right: 30px;
+}
+
+header .lun1 #d1 .min_dd img {
+  width: 320px;
+  height: 188px;
+}
+
+header .lun1 #d1 .min_dd .brief {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  font-weight: bold;
+}
+
+header .lun1 #d1 .min_dd .nu_ {
+  height: 25px;
+  width: 150px;
+  margin: 0 auto;
+}
+
+header .lun1 #d1 .min_dd .nu_ .totalnum {
+  color: #FC5C46;
+  border: 1px solid;
+  display: block;
+  float: left;
+  width: 70px;
+  border-radius: 7px;
+  margin-right: 20px;
+}
+
+header .lun1 #d1 .min_dd .nu_ .num {
+  color: #FC5C46;
+  border: 1px solid;
+  display: block;
+  float: left;
+  width: 60px;
+  border-radius: 7px;
+}
+
+header .lun1 #d1 .min_dd .apply {
+  color: #FC5C46;
+}
+
+header .lun1 #d1 .min_dd .surplus {
+  color: #FC5C46;
+}
+
 header .report {
   width: 100%;
   background: #F7F7F7;
@@ -190,7 +253,12 @@ header .report .report_1 .__ajax div div span:nth-child(2) {
   margin-right: 7px;
 }
 
-.bottom {
+.b_big {
+  width: 100%;
+  background-color: #505050;
+}
+
+.b_big .bottom {
   width: 1600px;
   height: 500px;
   margin: 0 auto;
@@ -199,39 +267,39 @@ header .report .report_1 .__ajax div div span:nth-child(2) {
   padding-left: 80px;
 }
 
-.bottom .code {
+.b_big .bottom .code {
   float: left;
 }
 
-.bottom .jiguo {
+.b_big .bottom .jiguo {
   float: left;
   margin: 0 30px;
 }
 
-.bottom .lis {
+.b_big .bottom .lis {
   float: left;
 }
 
-.bottom .lis .d_ul {
+.b_big .bottom .lis .d_ul {
   overflow: hidden;
   float: left;
   margin-left: 20px;
   width: 200px;
 }
 
-.bottom .lis .d_ul span {
+.b_big .bottom .lis .d_ul span {
   color: #fff;
   font-size: 20px;
   display: block;
   margin-bottom: 10px;
 }
 
-.bottom .lis .d_ul ul {
+.b_big .bottom .lis .d_ul ul {
   float: left;
   margin-right: 20px;
 }
 
-.bottom .lis .d_ul ul li {
+.b_big .bottom .lis .d_ul ul li {
   list-style: none;
   font-size: 14px;
   color: #A2A6A5;
