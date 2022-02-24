@@ -388,12 +388,35 @@ header .guide .guide_1 .guide_div .button_border3 {
 
 header .coldplay {
   width: 100%;
-  background: #505050;
+  background: #F7F7F7;
 }
 
 header .coldplay .coldplay_1 {
   width: 1600px;
+  height: 480px;
+  overflow: hidden;
+  padding-top: 20px;
+  padding-left: 180px;
+  padding-right: 100px;
   margin: auto;
+}
+
+header .coldplay .coldplay_1 .aaaa {
+  width: 220px;
+  height: 177px;
+  margin-right: 110px;
+  float: left;
+  margin-top: 30px;
+}
+
+header .coldplay .coldplay_1 .aaaa .imgh {
+  width: 220px;
+}
+
+header .coldplay .coldplay_1 .aaaa .jianjie {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 .b_big {

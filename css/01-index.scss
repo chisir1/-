@@ -363,10 +363,34 @@ header{
 // 酷玩精选
     .coldplay{
         width: 100%;
-        background: #505050;
+        background: #F7F7F7;
        .coldplay_1{
            width: 1600px;
+           height: 480px;
+            overflow: hidden;
+
+        //    padding: 20px 180px;
+        padding-top: 20px;
+        padding-left: 180px;
+        padding-right: 100px;
             margin: auto;
+            .aaaa{
+                width: 220px;
+                height: 177px;
+                margin-right: 110px;
+                float: left;
+                // margin-bottom: 30px;
+                margin-top: 30px;
+                .imgh{
+                width: 220px;
+                    
+                }
+                .jianjie{
+                   white-space: nowrap;
+                   overflow: hidden;
+                   text-overflow: ellipsis; 
+                }
+            }
        } 
     }
 }
