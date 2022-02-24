@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link href="//netdna.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
     <link rel="stylesheet" href="./../css/01-index.css">
 </head>
 <body>
@@ -37,7 +38,7 @@
                         <span>￥599</span> 
                         <span>20台</span>
                     </div>
-                    <h4>申请时间剩余：<span></span></h4>
+                    <h4>申请时间剩余：<span id="time_"></span></h4>
                     <div class="div_">立即申请</div>
                 </div>
             </div>
@@ -49,7 +50,7 @@
     <!-- 2准备页面容器 -->
 
     <div class="left_right">
-        <!-- <h1 class="qqq">热门试用</h1> -->
+        <h1 class="qqq">热门试用</h1>
         <div class="lun_left"><i class="fa fa-arrow-left"></i></div>
         <div class="lun_right"><i class="fa fa-arrow-right"></i></div>
     <div class="lun1">
@@ -76,7 +77,6 @@
     <!-- 3准备模板 -->
     <!-- 轮播模板 -->
     <script id="first" type="text/html">
-       <h1>热门试用</h1>
         {{each value}}
         <div class="min_dd">
             
