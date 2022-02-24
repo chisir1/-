@@ -47,9 +47,12 @@
     <script src="./../js/template-web.js"></script>
     <!-- 2准备页面容器 -->
     <div class="lun1">
-
-    
         <div id="d1"></div>
+    </div>
+    <div class="report">
+        <div class="report_1">  
+      
+        </div>
     </div>
     <!-- 3准备模板 -->
     <script id="first" type="text/html">
@@ -64,10 +67,32 @@
         </div>
         {{/each}}
     </script>
+   
+    
+    <script src="./../js/template-web.js"></script>
+    <script id="report_" type="text/html">
+        <h3>报告精选</h3>
+        {{each value}}
+        <div class="__ajax">
+            <div class="._ajax_imgs"><img src="{{$value.img}}" alt=""></div>
+            <p>{{$value.text}}</p>
+            <div>
+                <span>.</span>
+                <span>{{$value.uName}}</span>
+                <div>
+                    <span><img src="./../img/zan.png" alt=""></span>
+                    <span>{{$value.like}}</span>
+                    <span><img src="./../img/reply.png" alt=""></span>
+                    <span>{{$value.words}}</span>
+                </div>
+            </div>
+        </div>
+        {{each}}
+    </script>
     <script src="./../js/oajax.js"></script>
     <script>
-        ajax_api('http://192.168.31.110:3000/useing/public',fn)
-         // 模板和数据关联
+        ajax_api('http://192.168.31.110:3000/report/new',fn)
+        //  模板和数据关联
          function fn(obj){
             var html = template('first',{
                 value:obj
@@ -75,27 +100,21 @@
             //向页面渲染
             document.getElementById('d1').innerHTML= html
             }
-    </script>
-        <!-- 报告精选 -->
-        <div class="report">
-            <div class="report_1">
-                <h3>报告精选</h3>
-                <div class="__ajax">
-                    <div class="_ajax_imgs"></div>
-                    <p></p>
-                    <div>
-                        <span>.</span>
-                        <span>susu</span>
-                        <div>
-                            <span><img src="./../img/zan.png" alt=""></span>
-                            <span>1</span>
-                            <span><img src="./../img/reply.png" alt=""></span>
-                            <span>2</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
+     
+
+
+
+         ajax_api('http://192.168.31.110:3000/useing/master',fn)
+            function fn(obj){
+                var repo_html = template('report_',{
+                value:obj
+                
+            })
+          
+            document.getElementsByClassName('report_1')[0].innerHTML=repo_html
+            }
+         
+    </script>  
     </header>
     <!-- 底部 -->
     <!-- 页面尾部 -->
