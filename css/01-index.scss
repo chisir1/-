@@ -56,7 +56,76 @@ header{
         
     }
 }
-// <!-- 页面头部 -->
+
+
+// 轮播图
+.lun1{
+    width: 1600px;
+    margin: 0 auto;
+    overflow: auto;
+    #d1{
+        width: 4550px;
+        height: 500px;
+        // overflow: auto;
+        .min_dd{
+            width: 320px;
+            float: left;
+            text-align: center;
+            margin-right: 30px;
+            img{
+                width: 320px;
+                height: 188px;
+            }
+            .brief{
+                white-space: nowrap;
+                overflow: hidden;
+                text-overflow: ellipsis;
+                font-weight: bold;
+            }
+            .nu_{
+                height: 25px;
+                width: 150px;
+                margin: 0 auto;
+                .totalnum{
+                    color: #FC5C46;
+                    border: 1px solid;
+                    display: block;
+                    float: left;
+                    width: 70px;
+                    border-radius: 7px;
+                    margin-right: 20px;
+                }
+                .num{
+                    color: #FC5C46;
+                    border: 1px solid;
+                    display: block;
+                    float: left;
+                    width: 60px;
+                    border-radius: 7px;
+
+                }
+            }
+            .apply{
+                color: #FC5C46;
+            }
+            .surplus{
+                color: #FC5C46;
+            }
+
+        }
+    }
+}
+
+
+
+
+
+
+
+
+
+
+// <!-- 页面底部 -->
 .b_big{
 width: 100%;
 background-color: #505050;

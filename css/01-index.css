@@ -61,6 +61,69 @@ header div .right li span {
   color: red;
 }
 
+.lun1 {
+  width: 1600px;
+  margin: 0 auto;
+  overflow: auto;
+}
+
+.lun1 #d1 {
+  width: 4550px;
+  height: 500px;
+}
+
+.lun1 #d1 .min_dd {
+  width: 320px;
+  float: left;
+  text-align: center;
+  margin-right: 30px;
+}
+
+.lun1 #d1 .min_dd img {
+  width: 320px;
+  height: 188px;
+}
+
+.lun1 #d1 .min_dd .brief {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  font-weight: bold;
+}
+
+.lun1 #d1 .min_dd .nu_ {
+  height: 25px;
+  width: 150px;
+  margin: 0 auto;
+}
+
+.lun1 #d1 .min_dd .nu_ .totalnum {
+  color: #FC5C46;
+  border: 1px solid;
+  display: block;
+  float: left;
+  width: 70px;
+  border-radius: 7px;
+  margin-right: 20px;
+}
+
+.lun1 #d1 .min_dd .nu_ .num {
+  color: #FC5C46;
+  border: 1px solid;
+  display: block;
+  float: left;
+  width: 60px;
+  border-radius: 7px;
+}
+
+.lun1 #d1 .min_dd .apply {
+  color: #FC5C46;
+}
+
+.lun1 #d1 .min_dd .surplus {
+  color: #FC5C46;
+}
+
 .b_big {
   width: 100%;
   background-color: #505050;

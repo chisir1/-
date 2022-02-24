@@ -36,6 +36,43 @@
 
 
 
+<!-- 轮播图 -->
+    <!-- 1.移入模板引擎 -->
+    <script src="./../js/template-web.js"></script>
+    <!-- 2准备页面容器 -->
+    <div class="lun1">
+
+    
+        <div id="d1"></div>
+    </div>
+    <!-- 3准备模板 -->
+    <script id="first" type="text/html">
+       <h1>热门试用</h1>
+        {{each value}}
+        <div class="min_dd">
+            <img src={{$value.img}} alt="" >
+            <p class="brief">{{$value.text}}</p>
+            <p class="nu_"><span class="totalnum">{{$value.totalnum}}</span><span class="num">{{$value.num}}</span></p>
+            <p><span class="apply">{{$value.apply}}</span>申请</p>
+            <p class="surplus">剩余时间2天</p>
+        </div>
+        {{/each}}
+    </script>
+    <script src="./../js/oajax.js"></script>
+    <script>
+        ajax_api('http://192.168.31.110:3000/useing/public',fn)
+         // 模板和数据关联
+         function fn(obj){
+            var html = template('first',{
+                value:obj
+            })
+            //向页面渲染
+            document.getElementById('d1').innerHTML= html
+            }
+    </script>
+
+
+
 
 
 
