@@ -2,6 +2,7 @@
     margin: 0;
     padding: 0;
     list-style: none;
+    box-sizing: border-box;
 }
 header{
     width: 100%;
@@ -55,3 +56,47 @@ header{
         
     }
 }
+  
+.bottom{
+    width: 1600px;
+    height: 500px;
+    margin: 0 auto;
+    background-color: #505050;
+    padding-top: 50px;
+    padding-left: 80px;
+    .code{
+        float: left;
+    }
+    .jiguo{
+        float: left;
+        margin: 0 30px;
+    }
+    .lis{
+        float: left;
+        
+        .d_ul{
+            overflow: hidden;
+            float: left;
+            margin-left: 20px;
+            width: 200px;
+            // text-align: center;
+        span{
+            // float: left;
+            color: #fff;
+            font-size: 20px;
+            display: block;
+            margin-bottom: 10px;
+        }
+        ul{
+            float: left;
+            margin-right: 20px;
+            li{
+                list-style: none;
+                font-size: 14px;
+                color: #A2A6A5;
+            }
+        }
+        }
+
+    }
+  }
