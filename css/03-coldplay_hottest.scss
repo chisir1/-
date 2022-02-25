@@ -1,0 +1,68 @@
+.daogou_out{
+    width: 100%;
+    // height: 800px;
+    overflow: hidden;
+    position: relative;
+    .daogou_title{
+        width: 1600px;
+        margin: 0 auto;
+        text-align: center;
+        position: relative;
+        .pp{
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            margin-top: 30px;
+            .span1{
+                display: block;
+                width: 150px;
+                height: 30px;
+                float: left;
+                text-align: center;
+            }
+
+        }
+    }
+    #max_new{
+        width: 1600px;
+        height: 1050px;
+        margin: 0 auto;
+        overflow: hidden;
+        // position: absolute;
+        // left: 50%;
+        // transform: translateX(-50%);
+        // z-index: 6;
+        .max_out{
+            width: 320px;
+            height: 265px;
+            float: left;
+            margin-right: 80px;
+            // margin-left: 80px;
+            margin-top: 80px;
+           .img_{
+               width: 320px;
+               height: 188px;
+           } 
+           .text{
+               height: 30px;
+           }
+           .spa_{
+               float: right;
+               span{
+                   margin-right: 10px;
+               }
+           }
+        }
+    }
+
+}
+.span_st{
+    border-bottom: 3px solid;
+    color: #FA5530;
+}
+.jiazai_{
+    width: 120px;
+    color: #FC5C46;
+    margin: 30px auto;
+    
+}
