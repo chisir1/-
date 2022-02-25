@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./../css/head.css">
+    <link rel="stylesheet" href="./../css/bottom.css">
+    <link rel="stylesheet" href="./../css/08-trial_all.css">
+</head>
+<body>
+    <header>
+        <!-- 头部 -->
+       <div class="now">
+           <ul class="left">
+               <li></li>
+               <li>首页</li>
+               <li>酷玩</li>
+               <li>导购</li>
+               <li>试用</li>
+               <li>报告</li>
+           </ul>
+           <ul class="right">
+               <li>
+                   <div></div>
+                   <span>注册</span>
+               </li>
+           </ul>
+       </div>
+       <div class="clear"></div>
+    </header>
+
+
+<!-- 试用模块 -->
+    <div class="sy_out">
+
+        <div class="sy_head">
+            <h1>免费试用</h1>
+            <div class="dzty">
+                <div class="dzty2">
+
+                    <span class="spp1">大众试用</span>
+                    <span class="spp2">体验师专享</span>
+                </div>
+            </div>
+        </div>
+        <div class="sy_head2">
+            <span class="sy_all">全部</span>
+            <span class="sy_sq">申请中</span>
+            <span class="sy_sy">试用中</span>
+            <span class="sy_js">已结束</span>
+        </div>
+        <div class="d_all">
+
+        </div>
+        <div class="jz_"><img src="./../img/more.png" alt="" class="jz_img2">点击加载更多</div>
+    </div>
+    <!-- 1.移入模板引擎 -->
+    <script src="./../js/template-web.js"></script>
+    <!-- 2准备页面容器 -->
+
+    <!-- 3准备模板 -->
+    <script id="shiy" type="text/html">
+        {{each value}}
+        <div class="all_min">
+            {{if $value.info_ty === '首发'}}
+            <div class="ri_top">{{$value.info_ty}}</div>
+            {{else if $value.info_ty === '体验师转享'}}
+            <div class="ri_top2">{{$value.info_ty}}</div>
+
+            {{/if}}
+            <img src={{$value.img}} alt="" class="img_">
+            <p class="text_">{{$value.text}}</p>
+            {{if $value.endTime}}
+            <p class="totalnum_p color_"><span class="totalnum color_">{{$value.totalnum}}</span><span class="num color_">{{$value.num}}</span></p>
+            <p class="apply_p color_"><span class="apply1 color_">{{$value.apply}}</span>申请</p>
+            <p class="shengyu color_">剩余时间:<span>2</span></p>
+            {{else if $value.report}}
+            <p class="totalnum_p color_2"><span class="totalnum color_2">{{$value.totalnum}}</span><span class="num color_2">{{$value.num}}</span></p>
+            <p class="apply_p color_2"><span class="apply2 color_2">{{$value.apply}}</span>申请</p>
+            <p class="report_p2 color_2">报告数量:<span class="report2 color_2">{{$value.report}}</span></p>
+            {{else if $value.uName}}
+            <p class="totalnum_p color_3"><span class="totalnum color_3">{{$value.totalnum}}</span><span class="num color_3">{{$value.num}}</span></p>
+            <p class="apply_p color_3"><span class="apply3 color_3">{{$value.apply}}</span>申请</p>
+            <p class="report_p3 color_3"><span class="uName3 color_3">{{$value.uName}}</span></p>
+            {{/if}}
+        </div>
+        {{/each}}
+    </script>
+    <!-- 3.1申请中 -->
+    <script id="shiy_sq" type="text/html">
+        {{each value}}
+        {{if $value.endTime}}
+        <div class="all_min">
+            
+            {{if $value.info_ty === '首发'}}
+            <div class="ri_top">{{$value.info_ty}}</div>
+            {{else if $value.info_ty === '体验师转享'}}
+            <div class="ri_top2">{{$value.info_ty}}</div>
+
+            {{/if}}
+            
+            <img src={{$value.img}} alt="" class="img_">
+            <p class="text_">{{$value.text}}</p>
+            
+            <p class="totalnum_p color_"><span class="totalnum color_">{{$value.totalnum}}</span><span class="num color_">{{$value.num}}</span></p>
+            <p class="apply_p color_"><span class="apply1 color_">{{$value.apply}}</span>申请</p>
+            <p class="shengyu color_">剩余时间:<span>2</span></p>
+            
+            {{/if}}
+        </div>
+        {{/each}}
+    </script>
+    <!-- 3.2试用中 -->
+    <script id="shiy_sy" type="text/html">
+        {{each value}}
+        {{if $value.uName}}
+        <div class="all_min">
+            
+            {{if $value.info_ty === '首发'}}
+            <div class="ri_top">{{$value.info_ty}}</div>
+            {{else if $value.info_ty === '体验师转享'}}
+            <div class="ri_top2">{{$value.info_ty}}</div>
+
+            {{/if}}
+            
+            <img src={{$value.img}} alt="" class="img_">
+            <p class="text_">{{$value.text}}</p>
+            
+            <p class="totalnum_p color_3"><span class="totalnum color_3">{{$value.totalnum}}</span><span class="num color_3">{{$value.num}}</span></p>
+            <p class="apply_p color_3"><span class="apply3 color_3">{{$value.apply}}</span>申请</p>
+            <p class="report_p3 color_3"><span class="uName3 color_3">{{$value.uName}}</span></p>
+            
+            {{/if}}
+        </div>
+        {{/each}}
+    </script>
+
+
+    <!-- 3.3试用中 -->
+    <script id="shiy_js" type="text/html">
+        {{each value}}
+        {{if $value.report}}
+        <div class="all_min">
+            
+            {{if $value.info_ty === '首发'}}
+            <div class="ri_top">{{$value.info_ty}}</div>
+            {{else if $value.info_ty === '体验师转享'}}
+            <div class="ri_top2">{{$value.info_ty}}</div>
+
+            {{/if}}
+            
+            <img src={{$value.img}} alt="" class="img_">
+            <p class="text_">{{$value.text}}</p>
+            
+            <p class="totalnum_p color_2"><span class="totalnum color_2">{{$value.totalnum}}</span><span class="num color_2">{{$value.num}}</span></p>
+            <p class="apply_p color_2"><span class="apply2 color_2">{{$value.apply}}</span>申请</p>
+            <p class="report_p2 color_2">报告数量:<span class="report2 color_2">{{$value.report}}</span></p>
+            {{/if}}
+        </div>
+        {{/each}}
+    </script>
+
+
+
+
+    <script src="./../js/oajax.js"></script>
+    <script>
+        ajax_api('http://192.168.31.110:3000/useing/public',sh)
+        function sh(obj){
+            var html = template('shiy',{
+                value:obj
+            })
+            document.getElementsByClassName('d_all')[0].innerHTML= html
+        }
+    </script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <!-- 尾部 -->
+    <div class="b_big">
+        <div class="bottom">
+            <div class="code">
+                <img src="./../img/code.png" alt="">
+            </div>
+            <div class="jiguo">
+                <img src="./../img/logoImg.jpg" alt="">
+            </div>
+            <div class="lis">
+                <div class="d_ul">
+                    <span>免费试用</span>
+                    <ul>
+                        <li>试用流程</li>
+                        <li>如何提高成功率</li>
+                    </ul>
+                </div>  
+                <div class="d_ul">
+    
+                <span>友情链接</span>
+                <ul>
+                    <li>智东西</li>
+                    <li>搜狐IT</li>
+                    <li>搜狐数码</li>
+                    <li>凤凰数码</li>
+                    <li>泡泡网</li>
+                    <li>ZUK社区</li>
+                    <li>极客公园</li>
+                    <li>果库</li>
+                </ul>
+                <ul>
+                    <li>WEIBUSI</li>
+                    <li>腾讯科技</li>
+                    <li>凤凰科技</li>
+                    <li>PConline</li>
+                    <li>3W咖啡</li>
+                    <li>亿觅emie</li>
+                    <li>易迅易启玩</li>
+                </ul>
+                </div>
+                <div class="d_ul">
+    
+                <span>购买攻略</span>
+                <ul>
+                    <li>美亚海淘教程</li>
+                    <li>日亚海淘教程</li>
+                    <li>海淘转运攻略</li>
+                    <li>kickstarter 众筹购买攻略</li>
+                    <li>indiegogo 众筹购买攻略</li>
+                </ul>
+                </div>
+                <div class="d_ul">
+    
+                <span>广商合作</span>
+                <ul>
+                    <li>关于极果</li>
+                    <li>联系我们</li>
+                    <li>商务合作：BD@jiguo.com</li>
+                    <li>CEO邮箱：CEO@jiguo.com</li>
+                </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+<script src="./../js/08-trial_all.js"></script>
+</html>

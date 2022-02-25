@@ -1,3 +1,8 @@
+.geren_min2 {
+  float: left;
+  width: 150px;
+}
+
 .box {
   width: 100%;
 }
@@ -52,9 +57,76 @@
 
 .box .body_div .body_div1 {
   width: 1600px;
-  padding: 30px 180px 20px;
   margin: auto;
   overflow: hidden;
+}
+
+.box .body_div .body_div1 .category {
+  width: 1600px;
+  margin: auto;
+  overflow: hidden;
+}
+
+.box .body_div .body_div1 .category .sh {
+  padding-left: 180px;
+  background-color: #fff;
+  margin-top: 50px;
+}
+
+.box .body_div .body_div1 .category .shenghuo {
+  width: 1600px;
+  box-sizing: border-box;
+  overflow: hidden;
+  padding-top: 20px;
+  border-bottom: 1px solid black;
+}
+
+.box .body_div .body_div1 .category .shenghuo .play_min {
+  margin-right: 120px;
+  float: left;
+  overflow: hidden;
+  height: 150px;
+  text-align: center;
+  margin-top: 30px;
+}
+
+.box .body_div .body_div1 .category .shenghuo2 {
+  width: 1600px;
+  height: 200px;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+
+.box .body_div .body_div1 .category .shenghuo2 .play_min2 {
+  float: left;
+  margin-top: 30px;
+  width: 200px;
+}
+
+.box .body_div .body_div1 .category .geren {
+  padding-left: 180px;
+  background-color: #fff;
+  margin-top: 50px;
+}
+
+.box .body_div .body_div1 .category .geren .gr_top {
+  width: 1600px;
+  overflow: hidden;
+}
+
+.box .body_div .body_div1 .category .geren .gr_top .geren_min {
+  width: 200px;
+  float: left;
+  margin-top: 30px;
+}
+
+.box .body_div .body_div1 .category .geren .gr_bottom {
+  width: 1600px;
+  height: 50px;
+  line-height: 50px;
+  overflow: hidden;
+  margin-top: 30px;
+  border-top: 1px solid black;
 }
 
 .box .body_div .body_div1 .ajax_22 {

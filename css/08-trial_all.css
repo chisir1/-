@@ -1,0 +1,162 @@
+.sy_out {
+  width: 1600px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.sy_out .d_all {
+  overflow: hidden;
+  margin-top: 100px;
+  text-align: center;
+  margin-left: 150px;
+  height: 1350px;
+}
+
+.sy_out .d_all .all_min {
+  width: 320px;
+  float: left;
+  margin-right: 30px;
+  margin-top: 20px;
+  position: relative;
+}
+
+.sy_out .d_all .all_min .ri_top {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 60px;
+  height: 30px;
+  line-height: 30px;
+  background-color: red;
+  color: #fff;
+  border-radius: 10px;
+}
+
+.sy_out .d_all .all_min .ri_top2 {
+  position: absolute;
+  top: 0;
+  right: 0;
+  color: #f8f404;
+  width: 100px;
+  height: 30px;
+  border-radius: 10px;
+  line-height: 30px;
+}
+
+.sy_out .d_all .all_min img {
+  width: 320px;
+  height: 188px;
+}
+
+.sy_out .d_all .all_min .text_ {
+  height: 45px;
+}
+
+.sy_out .d_all .all_min .color_ {
+  color: #eb4239;
+}
+
+.sy_out .d_all .all_min .color_2 {
+  color: #CED2D7;
+}
+
+.sy_out .d_all .all_min .color_3 {
+  color: #5fdb46;
+}
+
+.sy_out .d_all .all_min .apply_p {
+  height: 30px;
+  line-height: 30px;
+}
+
+.sy_out .d_all .all_min .totalnum_p {
+  height: 30px;
+  width: 120px;
+  margin: 0 auto;
+}
+
+.sy_out .d_all .all_min .totalnum_p .totalnum {
+  width: 60px;
+  display: block;
+  float: left;
+  border: 1px solid;
+  margin-right: 30px;
+  border-radius: 6px;
+}
+
+.sy_out .d_all .all_min .totalnum_p .num {
+  width: 30px;
+  display: block;
+  float: left;
+  border: 1px solid;
+  border-radius: 6px;
+}
+
+.sy_out .sy_head {
+  position: relative;
+}
+
+.sy_out .sy_head .dzty {
+  width: 100%;
+  height: 50px;
+  text-align: center;
+  margin: 0 auto;
+  position: relative;
+  border-bottom: 1px solid #696969;
+}
+
+.sy_out .sy_head .dzty .dzty2 {
+  position: absolute;
+  left: 51%;
+  bottom: 0px;
+  transform: translateX(-50%);
+}
+
+.sy_out .sy_head .dzty .dzty2 .spp1 {
+  display: block;
+  width: 100px;
+  height: 28px;
+  float: left;
+  margin-right: 30px;
+}
+
+.sy_out .sy_head .dzty .dzty2 .spp2 {
+  display: block;
+  width: 100px;
+  height: 28px;
+  float: left;
+  margin-right: 30px;
+}
+
+.sy_out .sy_head2 {
+  margin-top: 50px;
+  height: 30px;
+  position: absolute;
+  left: 52%;
+  top: 120px;
+  transform: translateX(-50%);
+}
+
+.sy_out .sy_head2 span {
+  display: block;
+  float: left;
+  margin-right: 80px;
+}
+
+.sy_out .jz_ {
+  height: 25px;
+  line-height: 25px;
+  margin-top: 30px;
+  margin-bottom: 30px;
+  color: red;
+  cursor: pointer;
+}
+
+.yangshi {
+  color: red;
+  border-bottom: 3px solid;
+}
+
+.yangshi2 {
+  color: red;
+}

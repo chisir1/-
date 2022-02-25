@@ -39,9 +39,9 @@
             <div class=" box1">
                 <h1>发现酷玩</h1>
                 <div class="div_felt">
-                    <div class="div_red">最新</div>
-                    <div>最热</div>
-                    <div>品类</div>
+                    <div class="div_red d_new">最新</div>
+                    <div class="d_hot">最热</div>
+                    <div class="pinlei">品类</div>
                 </div>
             </div>
             <!-- 模板引擎 -->
@@ -49,15 +49,55 @@
             <!-- 最新容器 -->
             <div class="body_div">
                 <div class="body_div1">
-                    
-                </div>
-            </div>
-            <!-- 品类容器 -->
-            <div class="category">
-                <div class="caregory1">
+                    <div class="test" style="display: block;"></div>
+                    <div class="category" style="display: none;">
+                        <div class="sh">
+                            
+
+                            <div class="shenghuo">
+                            </div>
+                            <div class="shenghuo2"></div>
+                        </div>
+                        <div class="geren">
+                            <h3>个人护理</h3>
+                            <div class="gr_top"></div>
+                            <div class="gr_bottom"></div>
+                        </div>
+                        <div class="geren jiankang">
+                            <h3>健康</h3>
+                            <div class="gr_top jk_top"></div>
+                            <div class="gr_bottom jk_bottom"></div>
+                        </div>
+                        <div class="geren zhineng">
+                            <h3>智能穿戴</h3>
+                            <div class="gr_top zn_top"></div>
+                            <div class="gr_bottom zn_bottom"></div>
+                        </div>
+                        <div class="geren chuxing">
+                            <h3>出行</h3>
+                            <div class="gr_top cx_top"></div>
+                            <div class="gr_bottom cx_bottom"></div>
+                        </div>
+                        <div class="geren sheying">
+                            <h3>摄影</h3>
+                            <div class="gr_top sy_top"></div>
+                            <div class="gr_bottom sy_bottom"></div>
+                        </div>
+                        <div class="geren shouji">
+                            <h3>手机</h3>
+                            <div class="gr_top sj_top"></div>
+                            <div class="gr_bottom sj_bottom"></div>
+                        </div>
+                    </div>
 
                 </div>
             </div>
+            <!-- 品类容器 -->
+            <!-- <div class="category">
+                <div class="caregory1">
+
+                </div>
+            </div> -->
         </div>
     <!-- 底部 -->
     <!-- 尾部 -->
@@ -129,7 +169,7 @@
 <script id="colP" type="text/html">
     {{each value}}
         <div class="ajax_22">
-            <div class="imgs"><img src="{{$value[0].img}}" alt=""></div>
+            <div class="imgs"><img src={{$value[0].img}} alt=""></div>
             <p>{{$value[0].text}}</p>
             <div class="m_z">
                 <span>{{$value[0].price}}</span>
@@ -195,36 +235,201 @@
         </div>
     {{/each}}
 </script>
+<script id="colP2" type="text/html">
+    <!-- 酷玩品类模板 -->
+    <h3>生活</h3>
+    {{each value}}
+    {{if $value.icon}}
+        <div class="play_min">
+            <img src={{$value.icon}} alt="">
+            <p><span>{{$value.productName}}</span><span>({{$value.nums}})</span></p>
+        </div>
+    {{/if}}
+    {{/each}}
+</script>
+<script id="colP3" type="text/html">
+    {{each value}}
+    {{if !$value.icon}}
+    <div class="play_min2">
+        <span>{{$value.productName}}</span><span>({{$value.nums}})</span>
+    </div>
+    {{/if}}
+    {{/each}}
+</script>
+<!-- 个人护理 -->
+<script id="huli" type="text/html">
+    {{each value}}
+    {{if $value.icon}}
+        <div class="geren_min">
+            <img src={{$value.icon}} alt="">
+            <p><span>{{$value.productName}}</span><span>({{$value.nums}})</span></p>
+        </div>
+    {{/if}}
+    {{/each}}
+</script>
+<script id="huli2" type="text/html">
+    {{each value}}
+    {{if !$value.icon}}
+    <div class="geren_min2">
+        <span>{{$value.productName}}</span><span>({{$value.nums}})</span>
+    </div>
+    {{/if}}
+    {{/each}}
+</script>
+
+
 <script>
     ajax_api('http://192.168.31.110:3000/play/new',fnz)
         function fnz(obj){
             var chtml=template('colP',{
                 value:obj
             })
-            document.getElementsByClassName('body_div1')[0].innerHTML=chtml
+            document.getElementsByClassName('test')[0].innerHTML=chtml
+        }
+        function fny(obj){
+            var yhtml=template('colP2',{
+                value:obj.live
+            })
+            document.getElementsByClassName('shenghuo')[0].innerHTML=yhtml
+        }
+        function fny2(obj){
+            var whtml=template('colP3',{
+                value:obj.live
+            })
+            document.getElementsByClassName('shenghuo2')[0].innerHTML=whtml
+        }
+        function fng(obj){
+            var whtml=template('huli',{
+                value:obj.personal_care
+            })
+            document.getElementsByClassName('gr_top')[0].innerHTML=whtml
+        }
+        function fng2(obj){
+            var whtml=template('huli2',{
+                value:obj.personal_care
+            })
+            document.getElementsByClassName('gr_bottom')[0].innerHTML=whtml
+        }
+        function fnj(obj){
+            var whtml=template('huli',{
+                value:obj.smart_wear
+            })
+            document.getElementsByClassName('jk_top')[0].innerHTML=whtml
+        }
+        function fnj2(obj){
+            var whtml=template('huli2',{
+                value:obj.smart_wear
+            })
+            document.getElementsByClassName('jk_bottom')[0].innerHTML=whtml
+        }
+        function fnz1(obj){
+            var whtml=template('huli',{
+                value:obj.trip
+            })
+            document.getElementsByClassName('zn_top')[0].innerHTML=whtml
+        }
+        function fnz2(obj){
+            var whtml=template('huli2',{
+                value:obj.trip
+            })
+            document.getElementsByClassName('zn_bottom')[0].innerHTML=whtml
+        }
+        function fnc(obj){
+            var whtml=template('huli',{
+                value:obj.outdoor
+            })
+            document.getElementsByClassName('cx_top')[0].innerHTML=whtml
+        }
+        function fnc2(obj){
+            var whtml=template('huli2',{
+                value:obj.outdoor
+            })
+            document.getElementsByClassName('cx_bottom')[0].innerHTML=whtml
+        }
+        function fnsy(obj){
+            var whtml=template('huli',{
+                value:obj.digital
+            })
+            document.getElementsByClassName('sy_top')[0].innerHTML=whtml
+        }
+        function fnsy2(obj){
+            var whtml=template('huli2',{
+                value:obj.digital
+            })
+            document.getElementsByClassName('sy_bottom')[0].innerHTML=whtml
+        }
+        function fnsj(obj){
+            var whtml=template('huli',{
+                value:obj.digital
+            })
+            document.getElementsByClassName('sj_top')[0].innerHTML=whtml
+        }
+        function fnsj2(obj){
+            var whtml=template('huli2',{
+                value:obj.digital
+            })
+            document.getElementsByClassName('sj_bottom')[0].innerHTML=whtml
         }
     var  div_felt = document.getElementsByClassName('div_felt')[0].children
     var body_div = document.getElementsByClassName('body_div')[0]
     var body_div1 = document.getElementsByClassName('body_div1')[0]
-    var ajax_22 = document.getElementsByClassName('ajax_22')
-    var  ob = ['http://192.168.31.110:3000/play/new','http://192.168.31.110:3000/play/hot'] 
-        for( let i=0;i<div_felt.length;i++){
-            div_felt[i].onclick=function(){
-                for(var j=0;j<div_felt.length;j++){
-                    div_felt[j].className=''
-                }
-                this.className='div_red'
-                ajax_api(ob[i],fnz)
-                if(i==2){
-                    for (let c= 0; c<ajax_22.length; c++) {
-                        body_div1.removeChild(ajax_22[c])
-                        console.log(ajax_22.length);
-                    }
-                }
+    var ajax_22 = body_div1.children
+    var test = document.getElementsByClassName('test')[0]
+    var category = document.getElementsByClassName('category')[0]
+
+    // var ajax_22 = document.getElementsByClassName('ajax_22')
+
+        div_felt[0].onclick = function(){
+            // var category = document.getElementsByClassName('category')[0]
+
+            for(var i = 0;i<div_felt.length;i++){
+                div_felt[i].classList.remove('div_red')
             }
-            
+            this.classList.add('div_red')
+            // var tests_ = document.createElement('div')
+            // tests_.classList.add('test')
+            // body_div1.appendChild(tests_)
+            category.style.display = 'none'
+            test.style.display = 'block'
+
+            // body_div1.removeChild(category)
+
+            ajax_api('http://192.168.31.110:3000/play/new',fnz)
+
         }
-    console.log(div_felt);
+        div_felt[1].onclick = function(){
+            for(var i = 0;i<div_felt.length;i++){
+                div_felt[i].classList.remove('div_red')
+            }
+            this.classList.add('div_red')
+            category.style.display = 'none'
+            test.style.display = 'block'
+            ajax_api('http://192.168.31.110:3000/play/hot',fnz)
+        }
+        div_felt[2].onclick = function(){
+            for(var i = 0;i<div_felt.length;i++){
+                div_felt[i].classList.remove('div_red')
+            }
+            this.classList.add('div_red')
+            test.style.display = 'none'
+            category.style.display = 'block'
+            ajax_api('http://192.168.31.110:3000/play/category',fny)
+            ajax_api('http://192.168.31.110:3000/play/category',fny2)
+            ajax_api('http://192.168.31.110:3000/play/category',fng)
+            ajax_api('http://192.168.31.110:3000/play/category',fng2)
+            ajax_api('http://192.168.31.110:3000/play/category',fnj)
+            ajax_api('http://192.168.31.110:3000/play/category',fnj2)
+            ajax_api('http://192.168.31.110:3000/play/category',fnz1)
+            ajax_api('http://192.168.31.110:3000/play/category',fnz2)
+            ajax_api('http://192.168.31.110:3000/play/category',fnc)
+            ajax_api('http://192.168.31.110:3000/play/category',fnc2)
+            ajax_api('http://192.168.31.110:3000/play/category',fnsy)
+            ajax_api('http://192.168.31.110:3000/play/category',fnsy2)
+            ajax_api('http://192.168.31.110:3000/play/category',fnsj)
+            ajax_api('http://192.168.31.110:3000/play/category',fnsj2)
+
+        }
+
 </script>
 
 </html>

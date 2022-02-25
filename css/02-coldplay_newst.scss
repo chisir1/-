@@ -1,3 +1,7 @@
+.geren_min2{
+    float: left;
+    width: 150px;
+}
 .box{
     width: 100%;
     // background: #670085;
@@ -41,9 +45,82 @@
         background: #F7F7F7;
        .body_div1{
             width: 1600px;
-            padding:30px 180px 20px;
+            // padding:30px 180px 20px;
             margin: auto;
             overflow: hidden;
+            .category{
+                width: 1600px;
+                margin: auto;
+                overflow: hidden;
+                .sh{
+                    padding-left: 180px;
+                    background-color: #fff;
+                    margin-top: 50px;
+                }
+                .shenghuo{
+                    width: 1600px;
+                    // background-color: aquamarine;
+                    //  padding-left: 180px;
+                    box-sizing: border-box;
+                    overflow: hidden;
+                    padding-top: 20px;
+                    border-bottom: 1px solid black;
+
+                    .play_min{
+                        margin-right: 120px;
+                        float: left;
+                        
+                        overflow: hidden;
+                        height: 150px;
+                        text-align: center;
+                        margin-top: 30px;
+                    }
+
+                }
+                .shenghuo2{
+                    width: 1600px;
+                    height: 200px;
+                    // background-color: aquamarine;
+                    //  padding-left: 180px;
+                    box-sizing: border-box;
+                    overflow: hidden;
+                    .play_min2{
+                        float: left;
+                        margin-top: 30px;
+                        width: 200px;
+                        // height: 200px;
+                    }
+                }
+                .geren{
+                    padding-left: 180px;
+                    background-color: #fff;
+                    margin-top: 50px;
+                    .gr_top{
+                        width: 1600px;
+                        overflow: hidden;
+                        .geren_min{
+                            width: 200px;
+                            float: left;
+                            margin-top: 30px;
+                            
+                        }
+                    }
+                    .gr_bottom{
+                        width: 1600px;
+                        height: 50px;
+                        line-height: 50px;
+                        overflow: hidden;
+                        margin-top: 30px;
+                        border-top: 1px solid black;
+                        // background-color: aquamarine;
+                        // .geren_min2{
+                        //     float: left;
+                        //     width: 100px;
+                        // }
+                    }
+                }
+            }
+
             .ajax_22{
                 float: left;
                 width: 220px;
