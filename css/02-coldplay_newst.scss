@@ -1,0 +1,80 @@
+.box{
+    width: 100%;
+    // background: #670085;
+    .box1{
+        width: 1600px;
+        padding: 20px 180px 0px;
+        margin: auto;
+        h1{
+            text-align: center;
+            font-size: 2.5em;
+            margin: 20px 0px;
+        }
+        .div_felt{
+            margin-top: 40px;
+            overflow: hidden;
+                div{
+                    float: left;
+                    font-size: 30px;
+                    margin-right:140px ;
+                    padding: 15px 40px;
+                }
+                div:nth-child(1){
+                    margin-left: 270px;
+                }
+                .div_red{
+                    color: red;
+                    border-bottom:2px solid red;
+                }
+                .body_div{
+                    width: 100%;
+                    background: #F7F7F7;
+                    .body_div1{
+                        width: 1600px;
+                        padding: 180px;
+                    }
+                }
+        }
+    }
+    .body_div{
+        width: 100%;
+        background: #F7F7F7;
+       .body_div1{
+            width: 1600px;
+            padding:30px 180px 20px;
+            margin: auto;
+            overflow: hidden;
+            .ajax_22{
+                float: left;
+                width: 220px;
+                margin: 30px;
+                height: 250px;
+                background: #fff;
+                position: relative;
+                border-radius: 5%;
+                .imgs{
+                    width: 220px;
+                    img{
+                        width: 220px;
+                        border-radius: 5% 5% 0% 0%;
+                        height: 130px;
+                    }
+                }
+                p{
+                    width: 220px;
+                    height: 40px;
+                    margin: 15px 0px;
+                }
+                .m_z{
+                    margin: 20px 10px 0px;
+                    span{
+                        color: red;
+                    }
+                    div{
+                        float: right;
+                    }
+                }
+            }
+       } 
+    }
+}

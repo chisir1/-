@@ -1,0 +1,96 @@
+.box {
+  width: 100%;
+}
+
+.box .box1 {
+  width: 1600px;
+  padding: 20px 180px 0px;
+  margin: auto;
+}
+
+.box .box1 h1 {
+  text-align: center;
+  font-size: 2.5em;
+  margin: 20px 0px;
+}
+
+.box .box1 .div_felt {
+  margin-top: 40px;
+  overflow: hidden;
+}
+
+.box .box1 .div_felt div {
+  float: left;
+  font-size: 30px;
+  margin-right: 140px;
+  padding: 15px 40px;
+}
+
+.box .box1 .div_felt div:nth-child(1) {
+  margin-left: 270px;
+}
+
+.box .box1 .div_felt .div_red {
+  color: red;
+  border-bottom: 2px solid red;
+}
+
+.box .box1 .div_felt .body_div {
+  width: 100%;
+  background: #F7F7F7;
+}
+
+.box .box1 .div_felt .body_div .body_div1 {
+  width: 1600px;
+  padding: 180px;
+}
+
+.box .body_div {
+  width: 100%;
+  background: #F7F7F7;
+}
+
+.box .body_div .body_div1 {
+  width: 1600px;
+  padding: 30px 180px 20px;
+  margin: auto;
+  overflow: hidden;
+}
+
+.box .body_div .body_div1 .ajax_22 {
+  float: left;
+  width: 220px;
+  margin: 30px;
+  height: 250px;
+  background: #fff;
+  position: relative;
+  border-radius: 5%;
+}
+
+.box .body_div .body_div1 .ajax_22 .imgs {
+  width: 220px;
+}
+
+.box .body_div .body_div1 .ajax_22 .imgs img {
+  width: 220px;
+  border-radius: 5% 5% 0% 0%;
+  height: 130px;
+}
+
+.box .body_div .body_div1 .ajax_22 p {
+  width: 220px;
+  height: 40px;
+  margin: 15px 0px;
+}
+
+.box .body_div .body_div1 .ajax_22 .m_z {
+  margin: 20px 10px 0px;
+}
+
+.box .body_div .body_div1 .ajax_22 .m_z span {
+  color: red;
+}
+
+.box .body_div .body_div1 .ajax_22 .m_z div {
+  float: right;
+}

@@ -7,8 +7,10 @@
     <title>Document</title>
     <link rel="stylesheet" href="./../css/head.css">
     <link rel="stylesheet" href="./../css/bottom.css">
+    <link rel="stylesheet" href="./../css/02-coldplay_newst.css">
 </head>
 <body>
+    <!-- 头部 -->
     <header>
         <!-- 头部 -->
        <div class="now">
@@ -29,6 +31,32 @@
        </div>
        <div class="clear"></div>
     </header>
+    <!-- 中部 -->
+        <div class=" box">
+            <div class=" box1">
+                <h1>发现酷玩</h1>
+                <div class="div_felt">
+                    <div class="div_red">最新</div>
+                    <div>最热</div>
+                    <div>品类</div>
+                </div>
+            </div>
+            <!-- 模板引擎 -->
+            <script src="./../js/template-web.js"></script>
+            <!-- 最新容器 -->
+            <div class="body_div">
+                <div class="body_div1">
+                    
+                </div>
+            </div>
+            <!-- 品类容器 -->
+            <div class="category">
+                <div class="caregory1">
+
+                </div>
+            </div>
+        </div>
+    <!-- 底部 -->
     <div class="b_big">
         <div class="bottom">
             <div class="code">
@@ -93,4 +121,106 @@
         </div>
     </div>
 </body>
+<script src="./../js/oajax.js"></script>
+<script id="colP" type="text/html">
+    {{each value}}
+        <div class="ajax_22">
+            <div class="imgs"><img src="{{$value[0].img}}" alt=""></div>
+            <p>{{$value[0].text}}</p>
+            <div class="m_z">
+                <span>{{$value[0].price}}</span>
+                <div>
+                    <span><img src="./../img/zan.png" alt=""></span>
+                    <span>{{$value[0].like}}</span>
+                    <span><img src="./../img/reply.png" alt=""></span>
+                    <span>{{$value[0].words}}</span>
+                </div>
+            </div>
+        </div>
+        <div class="ajax_22">
+            <div class="imgs"><img src="{{$value[1].img}}" alt=""></div>
+            <p>{{$value[1].text}}</p>
+            <div class="m_z">
+                <span>{{$value[1].price}}</span>
+                <div>
+                    <span><img src="./../img/zan.png" alt=""></span>
+                    <span>{{$value[1].like}}</span>
+                    <span><img src="./../img/reply.png" alt=""></span>
+                    <span>{{$value[1].words}}</span>
+                </div>
+            </div>
+        </div>
+        <div class="ajax_22">
+            <div class="imgs"><img src="{{$value[2].img}}" alt=""></div>
+            <p>{{$value[2].text}}</p>
+            <div class="m_z">
+                <span>{{$value[2].price}}</span>
+                <div>
+                    <span><img src="./../img/zan.png" alt=""></span>
+                    <span>{{$value[2].like}}</span>
+                    <span><img src="./../img/reply.png" alt=""></span>
+                    <span>{{$value[2].words}}</span>
+                </div>
+            </div>
+        </div>
+        <div class="ajax_22">
+            <div class="imgs"><img src="{{$value[3].img}}" alt=""></div>
+            <p>{{$value[3].text}}</p>
+            <div class="m_z">
+                <span>{{$value[3].price}}</span>
+                <div>
+                    <span><img src="./../img/zan.png" alt=""></span>
+                    <span>{{$value[3].like}}</span>
+                    <span><img src="./../img/reply.png" alt=""></span>
+                    <span>{{$value[3].words}}</span>
+                </div>
+            </div>
+        </div>
+        <div class="ajax_22">
+            <div class="imgs"><img src="{{$value[4].img}}" alt=""></div>
+            <p>{{$value[4].text}}</p>
+            <div class="m_z">
+                <span>{{$value[4].price}}</span>
+                <div>
+                    <span><img src="./../img/zan.png" alt=""></span>
+                    <span>{{$value[4].like}}</span>
+                    <span><img src="./../img/reply.png" alt=""></span>
+                    <span>{{$value[4].words}}</span>
+                </div>
+            </div>
+        </div>
+    {{/each}}
+</script>
+<script>
+    ajax_api('http://192.168.31.110:3000/play/new',fnz)
+        function fnz(obj){
+            var chtml=template('colP',{
+                value:obj
+            })
+            document.getElementsByClassName('body_div1')[0].innerHTML=chtml
+        }
+    var  div_felt = document.getElementsByClassName('div_felt')[0].children
+    var body_div = document.getElementsByClassName('body_div')[0]
+    var body_div1 = document.getElementsByClassName('body_div1')[0]
+    var ajax_22 = document.getElementsByClassName('ajax_22')
+    var  ob = ['http://192.168.31.110:3000/play/new','http://192.168.31.110:3000/play/hot'] 
+        for( let i=0;i<div_felt.length;i++){
+            div_felt[i].onclick=function(){
+                for(var j=0;j<div_felt.length;j++){
+                    div_felt[j].className=''
+                }
+                this.className='div_red'
+                ajax_api(ob[i],fnz)
+                if(i==2){
+                    for (let c= 0; c<ajax_22.length; c++) {
+                        body_div1.removeChild(ajax_22[c])
+                        console.log(ajax_22.length);
+                    }
+                }
+            }
+            
+        }
+    console.log(div_felt);
+</script>
+
 </html>
