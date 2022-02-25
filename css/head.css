@@ -1,0 +1,68 @@
+* {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    box-sizing: border-box;
+  }
+  
+  .clear {
+    width: 0px;
+    height: 0px;
+    clear: both;
+  }
+  header {
+    width: 100%;
+  }
+  
+  header .now {
+    width: 1600px;
+    height: 60px;
+    margin: auto;
+    padding: 0px 180px;
+    box-sizing: border-box;
+  }
+  
+  header .now .left {
+    float: left;
+  }
+  
+  header .now .left li {
+    float: left;
+    font-size: 16px;
+    width: 80px;
+    text-align: center;
+    line-height: 60px;
+    color: #73615D;
+  }
+  
+  header .now .left li:nth-child(1) {
+    width: 120px;
+    background: url("./../img/logonew.png") 0px 4px no-repeat;
+    height: 60px;
+    background-size: 100%;
+    margin-right: 10px;
+  }
+  
+  header .now .left li:nth-child(2) {
+    color: red;
+  }
+  
+  header .now .right {
+    float: right;
+  }
+  
+  header .now .right li div {
+    padding: 0;
+    width: 80px;
+    height: 60px;
+    float: left;
+    background: url("./../img/search.png") 30px 20px no-repeat;
+  }
+  
+  header .now .right li span {
+    float: right;
+    padding: 4px 6px;
+    border: 1px solid;
+    margin: 15px 15px 0px;
+    color: red;
+  }

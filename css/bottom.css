@@ -1,0 +1,52 @@
+.b_big {
+    width: 100%;
+    background-color: #505050;
+  }
+  
+  .b_big .bottom {
+    width: 1600px;
+    height: 500px;
+    margin: 0 auto;
+    background-color: #505050;
+    padding-top: 50px;
+    padding-left: 80px;
+  }
+  
+  .b_big .bottom .code {
+    float: left;
+  }
+  
+  .b_big .bottom .jiguo {
+    float: left;
+    margin: 0 30px;
+  }
+  
+  .b_big .bottom .lis {
+    float: left;
+  }
+  
+  .b_big .bottom .lis .d_ul {
+    overflow: hidden;
+    float: left;
+    margin-left: 20px;
+    width: 200px;
+  }
+  
+  .b_big .bottom .lis .d_ul span {
+    color: #fff;
+    font-size: 20px;
+    display: block;
+    margin-bottom: 10px;
+  }
+  
+  .b_big .bottom .lis .d_ul ul {
+    float: left;
+    margin-right: 20px;
+  }
+  
+  .b_big .bottom .lis .d_ul ul li {
+    list-style: none;
+    font-size: 14px;
+    color: #A2A6A5;
+  }
+  
