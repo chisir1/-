@@ -68,6 +68,13 @@
 
         </div>
     </div>
+    <!-- 酷玩精选 -->
+    <div class="coldplay">
+        <div class="coldplay_1">
+            
+        </div>
+        <div class="jiazai"><img src="./../img/more.png" alt="" class="jiazai_img">点击加载更多</div>
+    </div>
     <!-- 3准备模板 -->
     <!-- 轮播模板 -->
     <script id="first" type="text/html">
@@ -123,6 +130,27 @@
         {{/each}}   
     </script>
 
+    <!-- 酷玩精选 -->
+    <script id="coldplay" type="text/html">
+       <h3>酷玩精选</h3>
+       {{each value}}
+       <div class="aaaa">
+            <div class="coldplay_img">
+                <img src="{{$value.img}}" alt="" class="imgh">
+            </div>
+            <p class="jianjie">{{$value.text}}</p>
+            <div>
+                <span>{{$value.price}}</span>
+                <div>
+                    <span><img src="./../img/zan.png" alt=""></span>
+                    <span>xxxxxxx</span>
+                    <span><img src="./../img/reply.png" alt=""></span>
+                    <span>xxxxx</span>
+                </div>
+            </div>
+        </div>
+        {{/each}}
+    </script>
     <script src="./../js/oajax.js"></script>
     <script>
         ajax_api('http://192.168.31.110:3000/useing/public',fn)
@@ -153,6 +181,14 @@
                 value:obj
             })
             document.getElementsByClassName('guide_1')[0].innerHTML= html1
+            }
+            // 酷玩热选
+            ajax_api('http://192.168.31.110:3000/report/new',fnk)
+            function fnk(obj){
+            var html2 = template('coldplay',{
+                value:obj
+            })
+            document.getElementsByClassName('coldplay_1')[0].innerHTML= html2
             }
     </script> 
     </header>

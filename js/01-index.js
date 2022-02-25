@@ -102,3 +102,15 @@ automove()
         };
     })
 }
+
+// 加载更多
+var jiazai = document.getElementsByClassName('jiazai')[0]
+var jiazai_img = document.getElementsByClassName('jiazai_img')[0]
+var coldplay_1 = document.getElementsByClassName('coldplay_1')[0]
+jiazai.onclick = function(){
+    jiazai_img.src = './../img/loading-icon.gif'
+    var jishi = setTimeout(function(){
+        jiazai.style.display = 'none';
+        coldplay_1.style.height=900 +'px'
+    },1000)
+}
