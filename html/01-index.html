@@ -7,6 +7,7 @@
     <title>Document</title>
     <link href="//netdna.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
     <link rel="stylesheet" href="./../css/01-index.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha512-SfTiTlX6kk+qitfevl/7LibUOeJWlt9rbyDn92a1DqWOw9vWG2MFoays0sgObmWazO5BQPiFucnnEAjpAB+/Sw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 <body>
     <!-- 页面头部 -->
@@ -24,9 +25,41 @@
             <ul class="right">
                 <li>
                     <div></div>
-                    <span>注册</span>
+                    <span class="zc">注册</span>
+                    <span class="dl">登录</span>
                 </li>
             </ul>
+        </div>
+        <div class="dl_div">
+            <div class="dl_div1">
+                <h2>极果账号登录</h2>
+                <span class="fa-mobile-phone fa-2x"></span>
+                <input type="text" placeholder="手机号" class="int1">
+                <span class="fa fa-lock fa-2x"></span>
+                <input type="passworrd" placeholder="密码" class="int1">
+                <div class=" int2">
+                    <input type="Checkbox" class="">:下次自动登录   
+                </div>
+                <button>登录</button>
+                <div class="mm">
+                    <a href="">注册新账号</a>
+                    <a href="">忘记密码？</a>
+                </div>
+            </div>
+            <div class="ewm">
+                <h3>社交网络账号登录</h3>
+                <img src="http://www.jiguo.com/mb/api/qrcode.html" alt="">
+                <div>
+                    <span>
+                         <i class="fa fa-user-circle-o"></i>
+                        微博
+                    </span>
+                    <span>
+                        <i class="fa fa-qq"></i>
+                        QQ
+                    </span>
+                </div>
+            </div>
         </div>
         <div class="clear"></div>
         <section>
@@ -189,6 +222,23 @@
                 value:obj[0]
             })
             document.getElementsByClassName('coldplay_1')[0].innerHTML= html2
+            }
+            var body=document.body
+            var dl = document.getElementsByClassName('dl')[0]
+           var jm = document.getElementsByClassName('dl_div')[0]
+           dl.addEventListener('click',ll,false)
+            body.addEventListener('click',ll1,false)
+            function ll(e){
+                var o = e||window.event
+                cancelBubble=true
+                o.stopPropagation()
+                jm.style.display='block'
+            }
+            function ll1(e){
+                var o = e||window.event
+                cancelBubble=true
+                o.stopPropagation()
+                jm.style.display='none'
             }
     </script> 
     </header>
