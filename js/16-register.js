@@ -8,8 +8,8 @@ var in_pass2 = document.querySelector('.in_pass2')
 var in_tell = document.querySelector('.in_tell')
 var sp = document.querySelectorAll('.sp')
 var reg_tel = /^1[^012][0-9]{9}$/;
-var reg_name = /^\w[4,8]$/;
-var pass = /^\w[6,12]$/;
+var reg_name = /^\w{4,8}$/;
+var pass = /^\w{6,12}$/;
 bnt2.onclick = function(){
     for(var i =0;i<sp.length;i++){
         sp[i].innerHTML = '';
@@ -17,12 +17,14 @@ bnt2.onclick = function(){
     if(!reg_tel.test(in_tell.value)){
         
         sp[0].innerHTML = '*请输入正确手机号!'
-    }else if(tu.value != 'r2B7'){
+    }else if(tu.value != 'r2b7'){
         sp[1].innerHTML = '*验证码错误!'
-    }else if(!reg_name.test(in_name.value)){
+    }
+    else if(!reg_name.test(in_name.value)){
         sp[3].innerHTML = '*用户名输入不合法!'
 
-    }else if(!pass.test(in_pass.value)){
+    }
+    else if(!pass.test(in_pass.value)){
 
         sp[4].innerHTML = '*密码输入不合法!'
     }else if(in_pass.value!=in_pass2.value){
@@ -32,13 +34,17 @@ bnt2.onclick = function(){
         // ajax请求
         var wajax = new XMLHttpRequest()||new ActiveXObject('Microsoft.XMLHTTP')
         wajax.open('post','http://192.168.31.110:3000/users/register',true)
-        wajax.send();
+        var us = `phone=${in_tell.value}&code=${tu.value}&username=${in_name.value}&password=${in_pass.value}`
+        wajax.setRequestHeader('Content-type','application/x-www-form-urlencoded')
+        wajax.send(us);
         wajax.onreadystatechange = function(){
             if(wajax.readyState == 4 && wajax.status == 200){
                 var obj = JSON.parse(wajax.responseText);
-                console.log(obj);
-                fn(obj)
-                
+                console.log(obj.msg);
+                if(obj.msg == '注册成功'){
+                    alert('注册成功')
+                    window.location.href='./../html/01-index.html'
+                }
             }
         }  
 

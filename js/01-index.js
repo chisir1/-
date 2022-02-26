@@ -61,6 +61,7 @@ var lun_left = document.getElementsByClassName('lun_left')[0]
 var lun_right = document.getElementsByClassName('lun_right')[0]
 lun_left.onmouseenter=function(){
     clearInterval(timer)
+    console.log(timer);
 }
 lun_left.onmouseleave=function(){
     automove()
@@ -77,7 +78,6 @@ lun_left.onclick=function(){
 
     if(star>=1600){
         index--
-
         lun.scrollLeft=star-1600
     }
 }
@@ -93,11 +93,14 @@ automove()
     document.addEventListener('visibilitychange',function(){
         if(this.visibilityState=="hidden"){
             console.log(this.visibilityState);
+            console.log(timer,timer2);
             clearInterval(timer)
             clearInterval(timer2)
         };
         if(this.visibilityState=="visible"){
             console.log(this.visibilityState);
+            console.log(timer,timer2);
+
             automove()
         };
     })

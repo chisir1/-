@@ -3,7 +3,7 @@ window.onload = function(){
     var spp2 = document.querySelector('.spp2')
     var jz_ = document.getElementsByClassName('jz_')[0]
     var jz_img2 = document.getElementsByClassName('jz_img2')[0]
-    // var d_all = document.querySelector('.d_all')
+    var d_all = document.querySelector('.d_all')
     var sy_sq = document.querySelector('.sy_sq')
     var sy_sy = document.querySelector('.sy_sy')
     var sy_js = document.querySelector('.sy_js')
@@ -19,14 +19,17 @@ window.onload = function(){
     jz_.onclick = function(){
         jz_img2.src = './../img/loading-icon.gif'
         setTimeout(function(){
+            // var d_all = document.querySelector('.d_all')
+
             jz_.style.display = 'none'
-            d_all.style.height = 2380 + 'px'
+            d_all.style.height = 2040 + 'px'
             ajax_api('http://192.168.31.110:3000/useing/public',sh)
             function sh(obj){
                 var html = template('shiy',{
                     value:obj
                 })
-                document.getElementById('d_all').innerHTML+= html
+                console.log('wwwwww');
+                document.getElementsByClassName('d_all')[0].innerHTML+= html
             }
         },1000)
     }
@@ -56,6 +59,7 @@ window.onload = function(){
         console.log(imgss);
         sy_out.appendChild(d_all1)
         sy_out.appendChild(jz_1)
+        
         ajax_api('http://192.168.31.110:3000/useing/public',sh)
         function sh(obj){
             var html = template('shiy_sq',{
@@ -63,6 +67,29 @@ window.onload = function(){
             })
             document.getElementsByClassName('d_all')[0].innerHTML= html
         }
+        d_all1.style.height = 700 + 'px'
+
+
+        jz_1.onclick = function(){
+            imgss.src = './../img/loading-icon.gif'
+            setTimeout(function(){
+                // var d_all = document.querySelector('.d_all')
+    
+                jz_1.style.display = 'none'
+                d_all1.style.height = 1400 + 'px'
+                ajax_api('http://192.168.31.110:3000/useing/public',sh)
+                function sh(obj){
+                    var html = template('shiy_sq',{
+                        value:obj
+                    })
+                    document.getElementsByClassName('d_all')[0].innerHTML+= html
+                }
+            },1000)
+        }
+
+
+
+
     }
     sy_sy.onclick = function(){
         for(var i = 0; i<sy_head2.children.length;i++){
@@ -95,8 +122,14 @@ window.onload = function(){
         document.getElementsByClassName('d_all')[0].innerHTML= html
     }
     
+    d_all1.style.height = 700 + 'px'
+
     
 }
+
+
+
+
 sy_js.onclick = function(){
     for(var i = 0; i<sy_head2.children.length;i++){
 
@@ -128,7 +161,7 @@ sy_js.onclick = function(){
         document.getElementsByClassName('d_all')[0].innerHTML= html
     }
     
-    
+    d_all1.style.height = 700 + 'px'
 }
 sy_all.onclick = function(){
     for(var i = 0; i<sy_head2.children.length;i++){

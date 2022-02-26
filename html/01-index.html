@@ -18,9 +18,9 @@
                 <li></li>
                 <li>首页</li>
                 <li><a href="./../play/02-coldplay_newest.html" style="color: #73615D;text-decoration: none;">酷玩</a> </li>
-                <li>导购</li>
-                <li>试用</li>
-                <li>报告</li>
+                <li><a href="./../play/03-coldplay_hottest.html"style="color: #73615D;text-decoration: none;">导购</a> </li>
+                <li><a href="./../use/08-trial_all.html"style="color: #73615D;text-decoration: none;">试用</a></li>
+                <li><a href="./../report/14-report_newest.html"style="color: #73615D;text-decoration: none;">报告</a> </li>
             </ul>
             <ul class="right">
                 <li>
@@ -35,13 +35,13 @@
             <div class="dl_div1">
                 <h2>极果账号登录</h2>
                 <span class="fa-mobile-phone fa-2x"></span>
-                <input type="text" placeholder="手机号" class="int1">
+                <input type="text" placeholder="手机号" class="int1 ip1">
                 <span class="fa fa-lock fa-2x"></span>
-                <input type="passworrd" placeholder="密码" class="int1">
+                <input type="password" placeholder="密码" class="int1 ip2">
                 <div class=" int2">
-                    <input type="Checkbox" class="">:下次自动登录   
+                    <input type="Checkbox" class="">下次自动登录   
                 </div>
-                <button>登录</button>
+                <button class="login">登录</button>
                 <div class="mm">
                     <a href="">注册新账号</a>
                     <a href="">忘记密码？</a>
@@ -224,21 +224,43 @@
             })
             document.getElementsByClassName('coldplay_1')[0].innerHTML= html2
             }
+
+
+            // 调用登录接口
             var body=document.body
             var dl = document.getElementsByClassName('dl')[0]
            var jm = document.getElementsByClassName('dl_div')[0]
+           var login = document.querySelector('.login')
+           var ip1 = document.querySelector('.ip1')
+           var ip2 = document.querySelector('.ip2')
            dl.addEventListener('click',ll,false)
-            body.addEventListener('click',ll1,false)
+            login.addEventListener('click',ll1,false)
             function ll(e){
                 var o = e||window.event
                 cancelBubble=true
                 o.stopPropagation()
                 jm.style.display='block'
             }
+
             function ll1(e){
                 var o = e||window.event
                 cancelBubble=true
                 o.stopPropagation()
+                var wajax = new XMLHttpRequest()||new ActiveXObject('Microsoft.XMLHTTP')
+                wajax.open('post','http://192.168.31.110:3000/users/login',true)
+                var us = `username=${ip1.value}&password=${ip2.value}`
+                wajax.setRequestHeader('Content-type','application/x-www-form-urlencoded')
+                wajax.send(us);
+                wajax.onreadystatechange = function(){
+                    if(wajax.readyState == 4 && wajax.status == 200){
+                        var obj = JSON.parse(wajax.responseText);
+                        console.log(obj.msg,typeof obj.msg);
+                        if(obj.msg == '登录成功'){
+                            alert('登录成功')
+                            window.location.href='./../html/01-index.html'
+                        }
+                    }
+                }  
                 jm.style.display='none'
             }
     </script> 
