@@ -43,7 +43,8 @@
        }
        .share{
             float: right;
-            div{
+            height: 200px;
+            .fen{
                 float: left;
                 width: 120px;
                 height: 100px;
@@ -52,6 +53,16 @@
                 text-align: center;
                 line-height: 140px;
                 color: #C0B3B8;
+            }
+            .fenxiang{
+                position: relative;
+                .bshare-custom{
+                    width: 300px;
+                    position: absolute;
+                    bottom: -25px;
+                    left: -80px;
+                    display: none;
+                }
             }
             div:nth-child(2){
                 border-left: 0px;
