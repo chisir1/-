@@ -12,53 +12,24 @@ section .box {
   margin: auto;
   color: #fff;
   position: relative;
-  -webkit-animation: aa 1s ease 0.5;
-          animation: aa 1s ease 0.5;
-}
-
-@-webkit-keyframes aa {
-  0% {
-    -webkit-transform: translate(500px, -300px);
-            transform: translate(500px, -300px);
-  }
-  40% {
-    -webkit-transform: translate(380px, -200px);
-            transform: translate(380px, -200px);
-  }
-  60% {
-    -webkit-transform: translate(260px, -100px);
-            transform: translate(260px, -100px);
-  }
-  80% {
-    -webkit-transform: translate(80px, -10px);
-            transform: translate(80px, -10px);
-  }
-  100% {
-    -webkit-transform: translate(0px, 0px);
-            transform: translate(0px, 0px);
-  }
+  animation: aa 1s ease 0.5;
 }
 
 @keyframes aa {
   0% {
-    -webkit-transform: translate(500px, -300px);
-            transform: translate(500px, -300px);
+    transform: translate(500px, -300px);
   }
   40% {
-    -webkit-transform: translate(380px, -200px);
-            transform: translate(380px, -200px);
+    transform: translate(380px, -200px);
   }
   60% {
-    -webkit-transform: translate(260px, -100px);
-            transform: translate(260px, -100px);
+    transform: translate(260px, -100px);
   }
   80% {
-    -webkit-transform: translate(80px, -10px);
-            transform: translate(80px, -10px);
+    transform: translate(80px, -10px);
   }
   100% {
-    -webkit-transform: translate(0px, 0px);
-            transform: translate(0px, 0px);
+    transform: translate(0px, 0px);
   }
 }
 
@@ -80,8 +51,7 @@ section .box .box1 div span {
   margin-right: 28px;
   border: 1px solid;
   padding: 5px 6px;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  box-sizing: border-box;
   background: rgba(255, 255, 255, 0.4);
 }
 
@@ -259,6 +229,8 @@ section .box .box1 .div_ {
 
 .rem .rem1 {
   width: 1600px;
+  height: 810px;
+  overflow: hidden;
   margin: auto;
   padding: 0px 180px 20px;
 }
@@ -266,4 +238,91 @@ section .box .box1 .div_ {
 .rem .rem1 h3 {
   margin-left: 60px;
 }
-/*# sourceMappingURL=13-coldplay.css.map */
+
+.d_all {
+  overflow: hidden;
+  margin-top: 100px;
+  text-align: center;
+  margin-left: 150px;
+  height: 1350px;
+}
+
+.d_all .all_min {
+  width: 320px;
+  float: left;
+  margin-right: 30px;
+  margin-top: 20px;
+  position: relative;
+}
+
+.d_all .all_min .ri_top {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 60px;
+  height: 30px;
+  line-height: 30px;
+  background-color: red;
+  color: #fff;
+  border-radius: 10px;
+}
+
+.d_all .all_min .ri_top2 {
+  position: absolute;
+  top: 0;
+  right: 0;
+  color: #f8f404;
+  width: 100px;
+  height: 30px;
+  border-radius: 10px;
+  line-height: 30px;
+}
+
+.d_all .all_min img {
+  width: 320px;
+  height: 188px;
+}
+
+.d_all .all_min .text_ {
+  height: 45px;
+}
+
+.d_all .all_min .color_ {
+  color: #eb4239;
+}
+
+.d_all .all_min .color_2 {
+  color: #CED2D7;
+}
+
+.d_all .all_min .color_3 {
+  color: #5fdb46;
+}
+
+.d_all .all_min .apply_p {
+  height: 30px;
+  line-height: 30px;
+}
+
+.d_all .all_min .totalnum_p {
+  height: 30px;
+  width: 120px;
+  margin: 0 auto;
+}
+
+.d_all .all_min .totalnum_p .totalnum {
+  width: 60px;
+  display: block;
+  float: left;
+  border: 1px solid;
+  margin-right: 30px;
+  border-radius: 6px;
+}
+
+.d_all .all_min .totalnum_p .num {
+  width: 30px;
+  display: block;
+  float: left;
+  border: 1px solid;
+  border-radius: 6px;
+}

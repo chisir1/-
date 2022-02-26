@@ -30,6 +30,16 @@
        </div>
        <div class="clear"></div>
     </header>
+
+
+    
+        <script type="text/javascript" charset="utf-8" src="http://static.bshare.cn/b/buttonLite.js#style=-1&amp;uuid=&amp;pophcol=2&amp;lang=zh"></script>
+        <script type="text/javascript" charset="utf-8" src="http://static.bshare.cn/b/bshareC0.js"></script>
+
+
+
+
+
         <div class="cpy_box">
             <div class="cpy_box1">
                 <p>
@@ -47,13 +57,23 @@
                     </div>
                 </div>
                 <div class="share">
-                    <div>
+                    <div class="fen">
                         喜欢
                         <span>15</span>
                     </div>
-                    <div>
+                    <div class="fenxiang fen">
                         分享
-                        <span></span></div>
+                        <span></span>
+                        <div class="bshare-custom">
+                            <a title="分享到QQ空间" class="bshare-qzone"></a>
+                            <a title="分享到新浪微博" class="bshare-sinaminiblog"></a>
+                            <a title="分享到人人网" class="bshare-renren"></a>
+                            <a title="分享到腾讯微博" class="bshare-qqmb"></a>
+                            <a title="分享到网易微博" class="bshare-neteasemb"></a>
+                            <a title="更多平台" class="bshare-more bshare-more-icon more-style-addthis"></a>
+                            <span class="BSHARE_COUNT bshare-share-count">0</span>
+                        </div>
+                    </div>
                 </div>
                 <div class="cpy_boy1">
                     <h4>钢笔，作为一个书写工具，像手表一样，不但具有功能性，还拥有了装饰（bi）等功能。不过总有人在死磕钢笔的本质：
@@ -188,4 +208,16 @@
         </div>
     </div>
 </body>
+<script>
+    var fenxiang = document.querySelector('.fenxiang')
+    var custom = document.querySelector('.bshare-custom')
+    var share = document.querySelector('.share')
+    fenxiang.onclick = function(){
+        custom.style.display = 'block'
+    }
+    share.onmouseleave = function(){
+        custom.style.display = 'none'
+
+    }
+</script>
 </html>

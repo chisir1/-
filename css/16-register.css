@@ -1,0 +1,76 @@
+body {
+  background-color: #F7F7F7;
+}
+
+.out {
+  width: 1200px;
+  height: 600px;
+  margin: 0 auto;
+  text-align: center;
+  margin-bottom: 20px;
+  position: relative;
+  background-color: #fff;
+  padding-top: 100px;
+  border-radius: 5px;
+}
+
+.out .hh {
+  position: absolute;
+  top: 30px;
+  left: 0;
+  border-left: 5px solid red;
+  width: 100px;
+  text-align: right;
+}
+
+.out .min {
+  width: 350px;
+  margin: 30px auto;
+}
+
+.out .min div {
+  position: relative;
+}
+
+.out .min div span {
+  position: absolute;
+  top: 25px;
+  right: -160px;
+  color: red;
+  width: 200px;
+}
+
+.out .min input {
+  height: 35px;
+  width: 300px;
+  margin-top: 20px;
+  background-color: #dfdcdc;
+  border: .5px solid #696969;
+  border-radius: 8px;
+  outline: none;
+}
+
+.out .min .bnt {
+  width: 122px;
+  height: 35px;
+}
+
+.out .min .tu {
+  width: 160px;
+  margin-right: 20px;
+}
+
+.out .min .in_yz {
+  margin-right: 20px;
+  width: 160px;
+}
+
+.out .min .bnt2 {
+  width: 300px;
+  height: 35px;
+  margin-top: 20px;
+  border-radius: 5px;
+  color: #fff;
+  background-color: red;
+  border: none;
+}
