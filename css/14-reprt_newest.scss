@@ -1,0 +1,184 @@
+.experience{
+    width: 100%;
+    background-color: #fff;
+    .experience1{
+        width: 1600px;
+        padding: 20px 180px 0px;
+        margin: auto;
+        border-top: 1px solid #F7F7F7;
+        h1{
+            text-align: center;
+            padding: 25px 0px ;
+        }
+        ul{
+            overflow: hidden;
+            li{
+                width: 120px;
+                float: left;
+                text-align: center;
+                font-size: 23px;
+                margin-right: 100px;
+                margin-top: 20px;
+            }
+            li:nth-child(1){
+                margin-left: 445px;
+            }
+            .red{
+                color: red;
+                border-bottom:2px solid red ;
+            }
+        }
+    }
+}
+.boxG{
+    width: 100%;
+    background: #F7F7F7;
+    .boxG1{
+        width: 1600px;
+        padding: 20px 180px;
+        margin: auto;
+        overflow: hidden;
+        .div700{
+            width: 700px;
+            float: left;
+            div{
+                width: 700px;
+                height: 376px;
+                border-radius:10px;
+                position: relative;
+                .aaa1{
+                    position: absolute;
+                    border-radius: 0px;
+                    bottom: 0px;
+                    width: 700px;
+                    height: 150px;
+                    border-radius:0 0 10px 10px;
+                    background: rgba(255, 255, 255, 0.8);
+                    p{
+                        padding: 30px 20px;
+                        font-size: 18px;
+                    }
+                    .su{
+                        width: 350px;
+                        height: 50px;
+                        float: left;
+                        line-height: 53px;
+                        span{
+                            margin-right: 15px;
+                        }
+                        span:nth-child(2){
+                            color: red;
+                        }
+                        span:nth-child(1){
+                            float: left;
+                            width: 20px;
+                            height: 20px;
+                            margin:17px 20px 0px 30px;
+                            border-radius:50%;
+                            background: url('./../img/tx.jpg');
+                        }
+                    }
+                    .zan{
+                        height: 50px;
+                        width: 140px;
+                        float: right;
+                        line-height: 53px;
+                        span:nth-child(2){
+                            margin-right: 16px;
+                        }
+                    }
+                }
+            }
+            .a1{
+                background: url('./../img/bg1.jpg');
+            }
+            .a2{
+                background: url('./../img/bg2.jpg');
+            }
+            .a3{
+                background: url('./../img/bg3.jpg');
+            }
+            .a4{
+                background: url('./../img/bg4.jpg');
+            }
+            .a5{
+                background: url('./../img/bg5.jpg');
+            }
+            .b1{
+                background: url('./../img/bg8.jpg');
+            }
+            .b2{
+                background: url('./../img/bg7.jpg');
+            }
+            .b3{
+                background: url('./../img/bg6.jpg');
+            }
+            .b4{
+                background: url('./../img/bg5.jpg');
+            }
+            .b5{
+                background: url('./../img/bg4.jpg');
+            }
+            .ww{
+                width: 700px;
+                border-radius:10px;
+                height: 50px;
+                margin: 20px 0px ;
+                border: 1px solid #eeeeee;
+                text-align: center;
+                line-height: 50px;
+                color: #0f0e0e;
+            }
+            .ccc{
+                height: 30px;
+                text-align: center;
+                color: red;
+            }
+        }
+        .intr3{
+            width: 280px;
+            float: right;
+            margin-right: 160px;
+            h3{
+                padding: 5px 15px;
+                border-left:7px solid red ;
+            }
+            h1{
+                padding: 20px 30px;
+                color: red;
+            }
+            div{
+                width: 280px;
+                height: 40px;
+                background: red;
+                color:#fff ;
+                font-size: 600;
+                font-size: 20px;
+                text-align: center;
+                line-height: 40px;
+                border-radius: 10px;
+            }
+            .gw{
+                text-align: center;
+                color: #7B7A7A;
+                font-size: 14px;
+                padding: 10px 0px 20px ;
+            }
+            img{
+                width: 280px;
+                margin: 10px 0px;
+            }
+            p{
+                color: #7B7A7A;
+                font-size: 14px;
+                padding:0px 0px 20px ;
+            }
+            h4{
+                padding: 10px 0px;
+            }
+            .dd1{
+                margin: 50px 0px 0px ;
+            }
+        }
+    }
+}

@@ -1,0 +1,269 @@
+section {
+  overflow: hidden;
+  width: 100%;
+  height: 300px;
+  background: url("./../img/original.jpg") 0px 0px no-repeat;
+  background-size: 100%  100%;
+}
+
+section .box {
+  width: 1600px;
+  padding: 0px 180px;
+  margin: auto;
+  color: #fff;
+  position: relative;
+  -webkit-animation: aa 1s ease 0.5;
+          animation: aa 1s ease 0.5;
+}
+
+@-webkit-keyframes aa {
+  0% {
+    -webkit-transform: translate(500px, -300px);
+            transform: translate(500px, -300px);
+  }
+  40% {
+    -webkit-transform: translate(380px, -200px);
+            transform: translate(380px, -200px);
+  }
+  60% {
+    -webkit-transform: translate(260px, -100px);
+            transform: translate(260px, -100px);
+  }
+  80% {
+    -webkit-transform: translate(80px, -10px);
+            transform: translate(80px, -10px);
+  }
+  100% {
+    -webkit-transform: translate(0px, 0px);
+            transform: translate(0px, 0px);
+  }
+}
+
+@keyframes aa {
+  0% {
+    -webkit-transform: translate(500px, -300px);
+            transform: translate(500px, -300px);
+  }
+  40% {
+    -webkit-transform: translate(380px, -200px);
+            transform: translate(380px, -200px);
+  }
+  60% {
+    -webkit-transform: translate(260px, -100px);
+            transform: translate(260px, -100px);
+  }
+  80% {
+    -webkit-transform: translate(80px, -10px);
+            transform: translate(80px, -10px);
+  }
+  100% {
+    -webkit-transform: translate(0px, 0px);
+            transform: translate(0px, 0px);
+  }
+}
+
+section .box .box1 {
+  position: absolute;
+  padding-top: 60px;
+  right: 180px;
+}
+
+section .box .box1 h1 {
+  font-size: 30px;
+}
+
+section .box .box1 div {
+  margin: 25px 0px;
+}
+
+section .box .box1 div span {
+  margin-right: 28px;
+  border: 1px solid;
+  padding: 5px 6px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  background: rgba(255, 255, 255, 0.4);
+}
+
+section .box .box1 div span:nth-child(1) {
+  margin-left: 6px;
+}
+
+section .box .box1 .div_ {
+  width: 240px;
+  height: 40px;
+  text-align: center;
+  line-height: 40px;
+  font-size: 18px;
+  font-weight: 600;
+  background: red;
+  margin-left: 18px;
+}
+
+.boxb {
+  width: 100%;
+  background: #F0F0F0;
+  height: 100px;
+}
+
+.boxb .boxb1 {
+  width: 1600px;
+  padding: 20px 180px;
+  height: 100px;
+  margin: auto;
+}
+
+.boxb .boxb1 ul {
+  overflow: hidden;
+}
+
+.boxb .boxb1 ul li {
+  height: 60px;
+  width: 80px;
+  float: left;
+  margin: 0px 60px;
+  color: #7B7A7A;
+  text-align: center;
+  line-height: 90px;
+  position: relative;
+}
+
+.boxb .boxb1 ul li img {
+  width: 25px;
+  height: 25px;
+  position: absolute;
+  top: 4px;
+  left: 28px;
+}
+
+.boxb .boxb1 ul li:nth-child(1) {
+  border-left: 7px solid red;
+  font-size: 20px;
+  font-weight: 600;
+  max-width: 60px;
+  line-height: 30px;
+  color: #03030f;
+}
+
+.introduce {
+  width: 100%;
+}
+
+.introduce .introduce1 {
+  width: 1600px;
+  margin: auto;
+  padding: 20px 180px;
+  overflow: hidden;
+}
+
+.introduce .introduce1 .introduce2 {
+  width: 700px;
+  margin-left: 60px;
+  float: left;
+}
+
+.introduce .introduce1 .introduce2 .title {
+  border-left: 7px solid red;
+  padding: 5px 10px;
+}
+
+.introduce .introduce1 .introduce2 h3 {
+  color: red;
+  padding: 20px 0px;
+}
+
+.introduce .introduce1 .introduce2 p {
+  margin: 20px 0px;
+  line-height: 27px;
+}
+
+.introduce .introduce1 .introduce2 img {
+  width: 700px;
+}
+
+.introduce .introduce1 .introduce2 .titleblue {
+  color: blue;
+  position: 45px 0px;
+}
+
+.introduce .introduce1 .introduce2 h4 {
+  color: blue;
+  padding: 30px 0px;
+}
+
+.introduce .introduce1 .introduce2 .a1 {
+  margin: 0px;
+}
+
+.introduce .introduce1 .introduce2 .a1 span {
+  font-weight: 600;
+}
+
+.introduce .introduce1 .intr3 {
+  width: 280px;
+  float: right;
+  margin-right: 160px;
+}
+
+.introduce .introduce1 .intr3 h3 {
+  padding: 5px 15px;
+  border-left: 7px solid red;
+}
+
+.introduce .introduce1 .intr3 h1 {
+  padding: 20px 30px;
+  color: red;
+}
+
+.introduce .introduce1 .intr3 div {
+  width: 280px;
+  height: 40px;
+  background: red;
+  color: #fff;
+  font-size: 600;
+  font-size: 20px;
+  text-align: center;
+  line-height: 40px;
+  border-radius: 10px;
+}
+
+.introduce .introduce1 .intr3 .gw {
+  text-align: center;
+  color: #7B7A7A;
+  font-size: 14px;
+  padding: 10px 0px 20px;
+}
+
+.introduce .introduce1 .intr3 img {
+  width: 280px;
+  margin: 10px 0px;
+}
+
+.introduce .introduce1 .intr3 p {
+  color: #7B7A7A;
+  font-size: 14px;
+  padding: 0px 0px 20px;
+}
+
+.introduce .introduce1 .intr3 h4 {
+  padding: 10px 0px;
+}
+
+.introduce .introduce1 .intr3 .dd1 {
+  margin: 50px 0px 0px;
+}
+
+.rem {
+  width: 100%;
+}
+
+.rem .rem1 {
+  width: 1600px;
+  margin: auto;
+  padding: 0px 180px 20px;
+}
+
+.rem .rem1 h3 {
+  margin-left: 60px;
+}
+/*# sourceMappingURL=13-coldplay.css.map */

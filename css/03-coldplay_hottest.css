@@ -14,7 +14,8 @@
 .daogou_out .daogou_title .pp {
   position: absolute;
   left: 50%;
-  transform: translateX(-50%);
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
   margin-top: 30px;
 }
 
@@ -68,3 +69,4 @@
   color: #FC5C46;
   margin: 30px auto;
 }
+/*# sourceMappingURL=03-coldplay_hottest.css.map */
