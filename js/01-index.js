@@ -48,7 +48,7 @@ function automove(){
         }
         move()
 
-    },3000)
+    },2000)
 }
 lun.onmouseenter = function(){
     clearInterval(timer)
@@ -111,6 +111,13 @@ jiazai.onclick = function(){
     jiazai_img.src = './../img/loading-icon.gif'
     var jishi = setTimeout(function(){
         jiazai.style.display = 'none';
-        coldplay_1.style.height=900 +'px'
+        coldplay_1.style.height=930 +'px'
+        ajax_api('http://192.168.31.110:3000/play/hot',fnk)
+        function fnk(obj){
+        var html2 = template('coldplay',{
+            value:obj[1]
+        })
+        document.getElementsByClassName('coldplay_1')[0].innerHTML+= html2
+        }
     },1000)
 }

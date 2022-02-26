@@ -162,7 +162,7 @@ header{
     position: relative;
 
     #d1{
-        width: 5200px;
+        width: 7200px;
         height: 400px;
         // overflow: auto;
         .min_dd{
@@ -394,6 +394,14 @@ header{
                    white-space: nowrap;
                    overflow: hidden;
                    text-overflow: ellipsis; 
+                   margin: 10px 0px;
+                }
+                .dz_ly{
+                    width: 80px;
+                    float: right;
+                }
+                .jiage{
+                    color: #FC5C46;
                 }
             }
        } 

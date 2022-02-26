@@ -136,16 +136,16 @@
        {{each value}}
        <div class="aaaa">
             <div class="coldplay_img">
-                <img src="{{$value.img}}" alt="" class="imgh">
+                <img src={{$value.img}} alt="" class="imgh">
             </div>
             <p class="jianjie">{{$value.text}}</p>
             <div>
-                <span>{{$value.price}}</span>
-                <div>
+                <span class="jiage">{{$value.price}}</span>
+                <div class="dz_ly">
                     <span><img src="./../img/zan.png" alt=""></span>
-                    <span>xxxxxxx</span>
+                    <span>{{$value.like}}</span>
                     <span><img src="./../img/reply.png" alt=""></span>
-                    <span>xxxxx</span>
+                    <span>{{$value.words}}</span>
                 </div>
             </div>
         </div>
@@ -183,10 +183,10 @@
             document.getElementsByClassName('guide_1')[0].innerHTML= html1
             }
             // 酷玩热选
-            ajax_api('http://192.168.31.110:3000/report/new',fnk)
+            ajax_api('http://192.168.31.110:3000/play/hot',fnk)
             function fnk(obj){
             var html2 = template('coldplay',{
-                value:obj
+                value:obj[0]
             })
             document.getElementsByClassName('coldplay_1')[0].innerHTML= html2
             }
