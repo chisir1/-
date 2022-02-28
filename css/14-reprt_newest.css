@@ -221,4 +221,19 @@
 .boxG .boxG1 .intr3 .dd1 {
   margin: 50px 0px 0px;
 }
-/*# sourceMappingURL=14-reprt_newest.css.map */
+
+.go_top {
+  width: 100px;
+  position: fixed;
+  background-color: red;
+  bottom: 100px;
+  right: 0px;
+}
+
+.go_top img {
+  width: 100px;
+}
+
+body {
+  position: relative;
+}

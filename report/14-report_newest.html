@@ -167,6 +167,12 @@
                 </div>
             </div>
         </div>
+
+        <div class="go_top">
+            <img src="./../img/back.png" alt="">
+        </div>
+
+
     <div class="b_big">
         <div class="bottom">
             <div class="code">
@@ -230,5 +236,29 @@
             </div>
         </div>
     </div>
+
 </body>
+<script>
+    var go_top = document.querySelector('.go_top')
+    var body = document.body
+    window.onscroll = function(){
+        var scroll=document.documentElement.scrollTop||document.body.scrollTop;
+        if(scroll >= 1000){
+            go_top.style.display = 'block'
+        }
+        else{
+            go_top.style.display = 'none'
+
+        }
+    }
+    
+    go_top.onclick = function(){
+        document.body.scrollTop = 0;
+        document.documentElement.scrollTop = 0;
+    }
+
+
+
+
+</script>
 </html>

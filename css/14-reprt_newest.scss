@@ -182,3 +182,17 @@
         }
     }
 }
+.go_top{
+    width: 100px;
+    position: fixed;
+    background-color: red;
+    bottom: 100px;
+    right: 0px;
+    img{
+        width: 100px;
+
+    }
+}
+body{
+    position: relative;
+}

@@ -33,9 +33,12 @@
                 .body_div{
                     width: 100%;
                     background: #F7F7F7;
+
+                    // padding-left: 200px;
                     .body_div1{
                         width: 1600px;
-                        padding: 180px;
+                        padding: 190px;
+
                     }
                 }
         }
@@ -43,11 +46,19 @@
     .body_div{
         width: 100%;
         background: #F7F7F7;
+        position: relative;
+        overflow: hidden;
+
+
        .body_div1{
             width: 1600px;
             // padding:30px 180px 20px;
             margin: auto;
             overflow: hidden;
+            // position: absolute;
+            // left: 50%;
+            padding-left: 110px;
+
             .category{
                 width: 1600px;
                 margin: auto;

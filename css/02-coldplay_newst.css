@@ -47,18 +47,21 @@
 
 .box .box1 .div_felt .body_div .body_div1 {
   width: 1600px;
-  padding: 180px;
+  padding: 190px;
 }
 
 .box .body_div {
   width: 100%;
   background: #F7F7F7;
+  position: relative;
+  overflow: hidden;
 }
 
 .box .body_div .body_div1 {
   width: 1600px;
   margin: auto;
   overflow: hidden;
+  padding-left: 110px;
 }
 
 .box .body_div .body_div1 .category {
